@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Coordinate Asyncronous Operations Using Promise.map()
+title: Coordinate Asyncronous Operations in Node.js Using Promise.map()
 ---
 
 Using promises is my (current) preferred method of managing async operations in Node.js. Recently I got hung-up on how to most effectively leverage promises to navigate through a series steps when one of the steps itself required an indeterminate number of asyncronous operations to be performed before the overall process could advance.
