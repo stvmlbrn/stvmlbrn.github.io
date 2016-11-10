@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Coordinate Asyncronous Operations in Node.js Using Promise.map()
+comments: true
 ---
 
 Using promises is my (current) preferred method of managing async operations in Node.js. Recently I got hung-up on how to most effectively leverage promises to navigate through a series steps when one of the steps itself required an indeterminate number of asyncronous operations to be performed before the overall process could advance.
@@ -99,3 +100,26 @@ sequelize.query(sql, {type: sequelize.QueryTypes.SELECT})
 Done! As you can see, line 21 will return a promise for each record in the results from step 1. However, the outer `Promise.map()` function will make sure that all those promises are fulfilled before moving to step 3. Perfect.
 
 Read the [complete documentation](http://bluebirdjs.com/docs/api/promise.map.html) on the Bluebird website.
+
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//stvmlbrn.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}

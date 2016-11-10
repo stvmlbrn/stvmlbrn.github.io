@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A Catch-All Route Handler For Rendering Views in Express
+comments: true
 ---
 
 When developing a Node/Express web app that has a large amount of views it's easy for our view rendering routes to become a bit unwieldy. Another small pain point is remembering to add a route every time we add a new view to the application. Admittedly these are far from the largest problems we'll face when developing our apps, but wouldn't it be nice if we could define a single function to solve both problems?
@@ -56,3 +57,25 @@ The overall process here is pretty simple. First we parse the path that was requ
 
 This code is good enough for our demo, but there are a couple of things we should probably add to this before using it in production. First, if your file system is case-sensitive you may want to take steps to ensure the requested view matches your file system (keep all files/folders in lower case and run ```.toLowerCase()``` on ```req.path``` should do the trick). Second, we don't really want to check the file system every time for views that we should already know exist. It may be a good idea to keep an array of views that were already found and check the contents of that array for matches before checking the file system.
 
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//stvmlbrn.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
