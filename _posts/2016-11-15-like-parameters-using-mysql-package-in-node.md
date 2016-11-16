@@ -30,8 +30,8 @@ connection.query(sql, [`%${lname}%`], ((err, result) => {
 {% endhighlight %}
 
 We first changed our sql statement to use `like` instead of `=`. Then we surround our ```lname``` variable with `%` symbols to match any number of characters. Simple - maybe that's why it's not
-included in the documentation to begin with 😉
+included in the documentation to begin with 🤔
 
-One additional thing worth noting here is how our use of [ES6 template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) makes this so much nicer. Prior to ES6 we'd have to
-build a string by concatenating things together like so: ```'%' + lname + '%'```. Yuck. Imagine a statement with many parameters, all building parameter strings like this. Template literals makes it so much cleaner
-and easier to read.
+One additional thing worth noting here is how the use of [ES6 template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) makes this so much nicer. Prior to ES6 we'd have to
+build a string by concatenating things together like so: ```'%' + lname + '%'```. Yuck. And with a large number of parameters things can get really ugly and hard to read in a hurry.
+Thankfully we can now use template literals to make this so much nicer.
