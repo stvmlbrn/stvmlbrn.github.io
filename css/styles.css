@@ -7,6 +7,15 @@
  * Website: http://themes.3rdwavemedia.com/
 */
 /* ======= Base ======= */
+
+/**
+ * Reset some basic elements
+ */
+pre, code {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Lato', arial, sans-serif;
   color: #434343;
