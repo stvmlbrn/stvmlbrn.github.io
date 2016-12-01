@@ -1,4 +1,4 @@
 ---
 layout: post
-title: Form Validation With React.js
+title: An Example of Form Validation With React.js
 ---
