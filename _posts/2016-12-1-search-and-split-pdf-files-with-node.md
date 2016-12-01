@@ -89,7 +89,7 @@ that arrays are zero-based and pages numbers are one-based, this seems weird, ri
 Nested loops like we have here is not something I'm crazy about, so it's tempting to try to optimize this a little bit. My first thought was to remove the item in ```pages[]``` after a match was found.
 That way, when we move on to the next employee there are fewer pages we need to search through in finding a matching ssn. However, this was a bad idea. Once we start
 removing items from ```pages[]```, then the index of that array no longer matches the original page number in the source PDF, causing the wrong page to be extracted. Oh well,
-performance here isn't of the upmost importance. And frankly the disk I/O of working with the PDF files is going to be the drag on performance, not the nested loop (especially with only
+performance here isn't of the upmost importance anyway. And frankly the disk I/O of working with the PDF files is going to be the drag on performance, not the nested loop (especially with only
 a few thousand records).
 
 So that's it. We just took a nearly 2000 page PDF document an extracted each page into it's own PDF that corresponds to each employee. It probably
