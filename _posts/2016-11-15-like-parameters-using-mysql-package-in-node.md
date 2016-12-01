@@ -12,25 +12,21 @@ queries are unclear, research 'SQL injection attack' for further understanding.
 
 The package documentation show us that in order to parameterize a query we would want to do something like this (updated a bit for ES6 syntax):
 
-<pre>
-  <code>
-    var sql = 'select * from users where lastname = ?';
-    connection.query(sql, [lname], ((err, result) => {
-      ...
-    });
-  </code>
+<pre class="javascript">
+  var sql = 'select * from users where lastname = ?';
+  connection.query(sql, [lname], ((err, result) => {
+    ...
+  });
 </pre>
 
 If our ```lname``` variable is equal to 'smith', this query will return all users in the database who have a last name of 'Smith'. But suppose we also wanted people named 'Smithers', 'Smitherson' and 'Hammersmith' - how do
 we adjust our syntax to use a ```like``` query? Have a look:
 
-<pre>
-  <code>
-    var sql = 'select * from users where lastname like ?';
-    connection.query(sql, [`%${lname}%`], ((err, result) => {
-      ...
-    });
-  </code>
+<pre class="javascript">
+  var sql = 'select * from users where lastname like ?';
+  connection.query(sql, [`%${lname}%`], ((err, result) => {
+    ...
+  });
 </pre>
 
 We first changed our sql statement to use `like` instead of `=`. Then we surround our ```lname``` variable with `%` symbols to match any number of characters. Simple - maybe that's why it's not
