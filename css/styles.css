@@ -11,10 +11,6 @@
 /**
  * Reset some basic elements
  */
-pre, code {
-  margin: 0;
-  padding: 0;
-}
 
 body {
   font-family: 'Lato', arial, sans-serif;
