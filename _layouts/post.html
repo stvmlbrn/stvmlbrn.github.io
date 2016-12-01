@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/css/stickyfooter.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
-    <link rel="stylesheet" href="/css/dracula.css">
+    <link rel="stylesheet" href="/css/zenburn.css">
     <link id="theme-style" rel="stylesheet" href="/css/styles.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -103,7 +103,13 @@
     {% include footer.html %}
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+      $(function() {
+        $('pre').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+      });
+    </script>
     <script id="dsq-count-scr" src="//stvmlbrn.disqus.com/count.js" async></script>
 </body>
 </html>
