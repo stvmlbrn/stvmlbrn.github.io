@@ -15,7 +15,8 @@ from Digital Ocean on setting up [Let's Encrypt on Ubuntu 16.04 and Nginx](https
 provided a near-perfect process. I highly recommend it, and please [donate to the Let's Encrypt project](https://www.generosity.com/community-fundraising/make-a-more-secure-web-with-let-s-encrypt)
 if you are able.
 
-However, I did experience an error during the authorization process that I thought worth mentioning here. In order for
+However, I did experience an error during the authorization process that was neither the fault of Let's Encrypt or Digital
+Ocean but I nonetheless thought it was worth mentioning here. In order for
 Let's Encrypt to provide a certificate it has to be verify domain/DNS/IP configuration and that you have access
 to the server. It does this via the Let's Encrypt Client, a utility that run on the server, writes a file to the filesystem,
 and then attempts to access that file from the Internet. If successful, Let's Encrypt will issues your certificate.
