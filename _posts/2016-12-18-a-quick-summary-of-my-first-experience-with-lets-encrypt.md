@@ -37,9 +37,9 @@ was coming in from Let's Encrypt. And, of course, the configuration for the blog
 `/.well-known` directory and therefore the request failed.
 
 There are 2 easy and obvious ways to fix this. First, we can add the location block to access the `/.well-known` directory
-to the blog.cronalarm.com configuration in Nginx. My solution, however, was to remove the symlink in the `sites-enabled`
+to the blog.cronalarm.com configuration in Nginx. My solution, however, was to remove the symlink in the Nginx `sites-enabled`
 directory, run the utility again (which Nginx now handles with the default configuration file), then add the
-symlink back to the `sites-enabled` directory. (Note: you'll need to start Nginx after removing and add the symlink files).
+symlink back to the Nginx `sites-enabled` directory. (Note: you'll need to start Nginx after removing and add the symlink files).
 
 This really was a minor setback in the overall process. But as it appeared during my google searches that others were having
 the same problem and I didn't see this solution anywhere I thought it worth putting here. All told, I had certificates
