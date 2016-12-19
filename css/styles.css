@@ -30,6 +30,13 @@ h6 {
   font-weight: 700;
   color: #778492;
 }
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+  padding-top: 10px;
+}
+
 a {
   color: #3AAA64;
   -webkit-transition: all 0.4s ease-in-out;
