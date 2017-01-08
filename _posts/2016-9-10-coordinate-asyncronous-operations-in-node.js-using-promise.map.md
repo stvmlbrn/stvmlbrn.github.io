@@ -100,7 +100,8 @@ In our example, the Iterable is going to be the array of records returned from s
   </code>
 </pre>
 
-Done! As you can see, line 21 will return a promise for each record in the results from step 1. However, the outer `Promise.map()` function will make sure that all those promises are fulfilled before moving to step 3. Perfect.
+Done! As you can see, the inner `sequelize.query` will return a promise for each record in the results from step 1. However,
+the `Promise.map()` function will make sure that all those promises are fulfilled before moving to step 3. Perfect.
 
 Read the [complete documentation](http://bluebirdjs.com/docs/api/promise.map.html) on the Bluebird website.
 

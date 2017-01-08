@@ -10,13 +10,13 @@ Fortunately, it's quite easy to do. We need to add our catch-all route *after* a
 
 <pre class="prettyprint">
   <code class="language-javascript">
-    const express = require('express');
-    const app = express();
-    const fs = require('fs');
-    const path = require('path');
-    const port = process.env.PORT || 3000;
+    var express = require('express');
+    var app = express();
+    var fs = require('fs');
+    var path = require('path');
+    var port = process.env.PORT || 3000;
 
-    const viewFolder = path.join(__dirname, 'views');
+    var viewFolder = path.join(__dirname, 'views');
 
     app.set('views', viewFolder);
     app.set('view engine', 'pug');
