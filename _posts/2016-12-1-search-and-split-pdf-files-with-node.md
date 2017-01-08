@@ -20,7 +20,8 @@ I found 2 useful packages to help in the process:
 
 Here is the entire script:
 
-<pre class="javascript">
+<pre class="prettyprint">
+  <code class="language-javascript">
     var extract = require('pdf-text-extract');
     var hummus = require('hummus');
     var path = require('path');
@@ -80,6 +81,7 @@ Here is the entire script:
         });
       });
     });
+  </code>
 </pre>
 
 

@@ -21,8 +21,10 @@ that not all existing packages allow (though some do):
 So let's take a look at an example sign-up form that asks for an email address, a password, and to
 confirm the password. Here is how we might generate such a form using React:
 
-<pre class="javascript">
-  import React from 'react';
+<pre class="prettyprint">
+  <code class="language-javascript">
+    import React from 'react';
+  </code>
 </pre>
 
 

@@ -10,7 +10,8 @@ For example, we can use promises to step through a sequence of asyncronous opera
 
 See the example problem below where we fetch a number of records from a database in step 1 and then need to perform another query for each record in step 2 and merge the results of step 1 and step 2 into an file before moving to step 3 where we need to ftp this file to a remote location.
 
-<pre class="javascript">
+<pre class="prettyprint">
+  <code class="language-javascript">
   var Promise = require('bluebird');
   var Sequelize = require('sequelize');
   var path = require('path');
@@ -45,6 +46,7 @@ See the example problem below where we fetch a number of records from a database
       */
     })
     .catch(err => console.log(err));
+  </code>
 </pre>
 
 
@@ -55,7 +57,8 @@ As stated in the [Bluebird documentation](http://bluebirdjs.com/docs/api/promise
 
 In our example, the Iterable is going to be the array of records returned from step 1, and our mapper function is going to a execute query for each individual record with each query returning it's own promise back to `Promise.map()`, which in turn will return a single promise to step 3 when all mapper functions are complete.
 
-<pre class="javascript">
+<pre class="prettyprint">
+  <code class="language-javascript">
   var Promise = require('bluebird');
   var Sequelize = require('sequelize');
   var path = require('path');
@@ -94,6 +97,7 @@ In our example, the Iterable is going to be the array of records returned from s
       //the ftp transfer is not relevent.
     })
     .catch(err => console.log(err));
+  </code>
 </pre>
 
 Done! As you can see, line 21 will return a promise for each record in the results from step 1. However, the outer `Promise.map()` function will make sure that all those promises are fulfilled before moving to step 3. Perfect.
