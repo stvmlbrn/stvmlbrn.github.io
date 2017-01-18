@@ -11,8 +11,7 @@ and numerous packages exists to solve this very problem (with, IMHO varying degr
 as I head down the path of learning something new I don't mind reinventing the wheel, so to speak, as
 it often helps the learning process.
 
-While some of this is may be obvious, there are a few objectives I have when performing client-side validation
-that not all existing packages allow (though some do):
+While some of this is may be obvious, there are a few objectives I have when performing client-side validation:
 
 * Apply multiple validation checks against an input
 * Be able to customize the error message based on the validation criteria that failed
@@ -27,7 +26,7 @@ confirm the password. Here is how we might generate such a form using React with
     import {render} from 'react-dom';
 
     /*
-    This is just some css sprinkled to help with the layout
+    This is just some css sprinkled in to help with the layout
     */
     import '../css/_bootstrap.scss';
     import '../css/signin.scss';
@@ -269,7 +268,7 @@ That's it! Putting everything together our completed SignUp component looks like
     import validator from 'validator';
 
     /*
-    This is just some css sprinkled to help with the layout
+    This is just some css sprinkled in to help with the layout
     */
     import '../css/_bootstrap.scss';
     import '../css/signin.scss';
