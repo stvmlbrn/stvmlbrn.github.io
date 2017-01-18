@@ -9,17 +9,17 @@ that I must re-think some of the ways I've solved seemingly trivial problems bef
 is dealing with client-side form validation. There are no shortages of ways and opinions on how to do this,
 and numerous packages exists to solve this very problem (with, IMHO varying degrees of success). However,
 as I head down the path of learning something new I don't mind reinventing the wheel, so to speak, as
-it often helps the learning process. As such, this is a process I came up with for form validation
-that I still use today.
+it often helps the learning process.
 
 While some of this is may be obvious, there are a few objectives I have when performing client-side validation
 that not all existing packages allow (though some do):
+
 * Apply multiple validation checks against an input
 * Be able to customize the error message based on the validation criteria that failed
 * Easily clear all error messages and applied CSS to form controls
 
 So let's take a look at an example sign-up form that asks for an email address, a password, and to
-confirm the password. Here is how we might generate such a form using React:
+confirm the password. Here is how we might generate such a form using React with basic Bootstrap styles:
 
 <pre class="prettyprint">
   <code class="language-javascript">
@@ -115,8 +115,8 @@ state with the input value.
 So now for each input we have a place to store its value, its validation state (defaulted to true), and
 a place to store a message we want to show the user. We have to change the value attribute on each
 of the form inputs to reflect this change (as well as the onChange() method). Also, let's go ahead an include the error message in the help-text
-block. And, while we are at it, lets setup the dynamically assign class to each form-group div that
-will apply an error class if the form input is invalid. To dynamically assigned classes, the
+block. And, while we are at it, lets setup the dynamically assigned class to each form-group div that
+will apply an error class if the form input is invalid. To dynamically assign classes, the
 [classnames](https://www.npmjs.com/package/classnames) module works perfectly. We need to add an import
 statement for the classnames module:
 
