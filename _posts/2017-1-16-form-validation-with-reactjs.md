@@ -8,7 +8,7 @@ As I first started to work with React and familiarize myself with it's one-way d
 that I must re-think some of the ways I've solved seemingly trivial problems before. One such issue
 is dealing with client-side form validation. There are no shortages of ways and opinions on how to do this,
 and numerous packages exists to solve this very problem (with, IMHO varying degrees of success). However,
-as I head down the path of learning something new I don't mind reinventing the wheel, so to speak, as
+as I head down the path of learning something new I don't mind reinventing the wheel as
 it often helps the learning process.
 
 While some of this is may be obvious, there are a few objectives I have when performing client-side validation:
