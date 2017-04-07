@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Form Validation Example With React.js
+title: Form Validation Example With React
 comments: true
 ---
 
