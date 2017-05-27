@@ -14,9 +14,9 @@ many cases we can find multiple packages to solve the same problem. When this ha
 here are some things I look at to help make a selection on what package to use.
 
 This list is not in any particular order and by no means should be considered exhaustive
-of all considerations that developers should make when deciding what to include in our
+of all things that we should consider when deciding what to include in our
 programs. However, these are the things I look at most often to make a decision on what
-to use, or maybe even to use an existing solution or write my own.
+to use, or maybe even write something from scratch.
 
 * **Recent Download Totals** -
 I know I said this list was not in a particular order but I am including this item at the
