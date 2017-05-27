@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thoughts On Choosing An NPM Package
+title: Considerations When Choosing An NPM Package
 comments: true
 ---
 
