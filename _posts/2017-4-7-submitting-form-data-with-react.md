@@ -23,6 +23,7 @@ is a simple example:
 
     class UserForm extends Component {
       constructor() {
+        super();
         this.state = {
           fname: '',
           lname: '',
@@ -33,7 +34,9 @@ is a simple example:
       onChange = (e) =&gt; {
         // Because we named the inputs to match their corresponding values in state, it's
         // super easy to update the state
-        this.setState({e.target.name: e.target.value});
+        const state = this.state
+        state[e.target.name] = e.target.value;
+        this.setState(state);
       }
 
       render() {
@@ -74,6 +77,7 @@ to use [Axios](https://www.npmjs.com/package/axios) but there are any number of 
 
     class UserForm extends Component {
       constructor() {
+        super();
         this.state = {
           fname: '',
           lname: '',
@@ -84,7 +88,9 @@ to use [Axios](https://www.npmjs.com/package/axios) but there are any number of 
       onChange = (e) =&gt; {
         // Because we named the inputs to match their corresponding values in state, it's
         // super easy to update the state
-        this.setState({e.target.name: e.target.value});
+        const state = this.state
+        state[e.target.name] = e.target.value;
+        this.setState(state);
       }
 
       onSubmit = (e) =&gt; {
@@ -92,7 +98,7 @@ to use [Axios](https://www.npmjs.com/package/axios) but there are any number of 
         // get our form data out of state
         const { fname, lname, email } = this.state;
 
-        axios.post('/', {fname: fname, lname: lname, email: email})
+        axios.post('/', { fname, lname, email })
           .then((result) => {
             //access the results here....
           });
