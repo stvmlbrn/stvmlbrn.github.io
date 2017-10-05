@@ -59,7 +59,7 @@ reflecting data that is stored in your state. Any changes to the input is handle
 handler, which updates the corresponding values in the state, which is in turn reflected in the input value.
 
 This may require a few more lines of code than what some developers may be used to if they are using
-other libraries like jQuery to gather and submit form data. Howerver, as applications grow and become more complex, having your data centralized in your state becomes really handy.
+other libraries like jQuery to gather and submit form data. However, as applications grow and become more complex, having your data centralized in your state becomes really handy.
 
 #### "No tutorials seem to go over anything like submitting form data"
 
