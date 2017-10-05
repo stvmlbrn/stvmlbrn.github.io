@@ -14,7 +14,7 @@ to put together an example addressing each of the issues (s)he is having.
 This is an example of where the adage "thinking in React" really applies. It's best not to think
 in terms of "getting data from a form or user input". You get your data from your "state". So during
 development the task you should be thinking about is "how do I put the value of the user input into
-my state". To do so, use the _onChange()_ event handler on the input fields. Here
+my state". To do so, use the `onChange()` event handler on the input fields. Here
 is a simple example:
 
 <pre class="prettyprint">
@@ -55,7 +55,7 @@ is a simple example:
 
 So when I said earlier that "you get your data from your state" it should be understood that _all data_
 comes from your state. The form inputs can be thought of as not actually having data, they are merely
-reflecting data that is stored in your state. Any changes to the input is handled by the _onChange()_
+reflecting data that is stored in your state. Any changes to the input is handled by the `onChange()`
 handler, which updates the corresponding values in the state, which is in turn reflected in the input value.
 
 This may require a few more lines of code than what some developers may be used to if they are using
@@ -67,7 +67,7 @@ After gaining an understanding of how and why we keep our form data in state. I 
 make perfect sense how we want to handle the form submission. In reality, it's not that much different than
 what your probably used to doing.
 
-Working from our example above, let's create an _onSubmit()_ function and attach that to the form. I like
+Working from our example above, let's create an `onSubmit()` function and attach that to the form. I like
 to use [Axios](https://www.npmjs.com/package/axios) but there are any number of tools that are suitable for this, such as SuperAgent, Fetch, and of couse, jQuery.
 
 <pre class="prettyprint">
