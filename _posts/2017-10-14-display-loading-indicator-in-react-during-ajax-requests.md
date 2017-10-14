@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Display A 'Loading' Status In React During Ajax Requests
+title: Display A 'Loading' Indicator In React During Ajax Requests
 comments: true
 ---
 
