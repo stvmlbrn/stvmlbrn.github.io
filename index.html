@@ -16,11 +16,18 @@ title: Steve Milburn
                                 <span class="text-muted"><i class="fa fa-calendar"></i> {{ post.date | date_to_long_string }}</span>
                                 <p class="summary">
                                   {{ post.excerpt }}
-                                  <a href="{{ post.url }}">
-                                    <span class="label label-info">
-                                      Continue reading...
+                                  <div>
+                                    <a href="{{ post.url }}">
+                                      <span class="label label-default">
+                                        Read more...
+                                      </span>
+                                    </a>
+                                    <span class="pull-right text-muted">
+                                      <a href="{{ post.url }}#disqus_thread">
+                                        <i class="fa fa-comments"></i> Comments
+                                      </a>
                                     </span>
-                                  </a>
+                                  </div>
                                 </p>
                                 <hr />
                             </div>
