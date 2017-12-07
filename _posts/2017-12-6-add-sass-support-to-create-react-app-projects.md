@@ -18,9 +18,7 @@ This first thing we need to do is install 3 packages, `node-sass`, `sass-loader`
 $ npm i node-sass sass-loader resolve-url-loader
 </pre>
 
-With the packages now installed, locate the 2 webpack config files in the `config` folder.
-
-They should be named `webpack.config.dev.js` and `webpack.config.prod.js` for the development and production builds, respectively. Open `webpack.config.dev.js` and locate the `module` section. This section has a `rules` array that contains an array named `oneOf`. Inside of this array you should see rules for dealing with images, css, and js files. Add the following object to this array:
+With the packages now installed, locate the 2 webpack config files in the `config` folder. They should be named `webpack.config.dev.js` and `webpack.config.prod.js` for the development and production builds, respectively. Open `webpack.config.dev.js` and locate the `module` section. This section has a `rules` array that contains an array named `oneOf`. Inside of this array you should see rules for dealing with images, css, and js files. Add the following object to this array:
 
 <pre class="prettyprint">
 {
