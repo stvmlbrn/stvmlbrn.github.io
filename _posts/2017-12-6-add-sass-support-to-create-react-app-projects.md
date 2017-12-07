@@ -15,61 +15,67 @@ By default, `create-react-app` abstracts most of the configuration away so you c
 This first thing we need to do is install 3 packages, `node-sass`, `sass-loader`, and `resolve-url-loader`.
 
 <pre class="prettyprint lang-bsh">
-$ npm i node-sass sass-loader resolve-url-loader
+  <code class="language-bsh">
+    $ npm i node-sass sass-loader resolve-url-loader
+  </code>
 </pre>
 
 With the packages now installed, locate the 2 webpack config files in the `config` folder. They should be named `webpack.config.dev.js` and `webpack.config.prod.js` for the development and production builds, respectively. Open `webpack.config.dev.js` and locate the `module` section. This section has a `rules` array that contains an array named `oneOf`. Inside of this array you should see rules for dealing with images, css, and js files. Add the following object to this array:
 
 <pre class="prettyprint">
-{
-  test: /\.scss$/,
-  include: [paths.appSrc, paths.appNodeModules],
-  use: [
+  <code class="language-js">
     {
-      loader: require.resolve('style-loader'),
-      options: {
-        sourceMap: true
-      }
+      test: /\.scss$/,
+      include: [paths.appSrc, paths.appNodeModules],
+      use: [
+        {
+          loader: require.resolve('style-loader'),
+          options: {
+            sourceMap: true
+          }
+        },
+        {
+          loader: require.resolve('css-loader'),
+        },
+        require.resolve('resolve-url-loader'),
+        {
+          loader: require.resolve('sass-loader'),
+          options: {
+            sourceMap: true
+          }
+        }
+      ]
     },
-    {
-      loader: require.resolve('css-loader'),
-    },
-    require.resolve('resolve-url-loader'),
-    {
-      loader: require.resolve('sass-loader'),
-      options: {
-        sourceMap: true
-      }
-    }
-  ]
-},
+  </code>
 </pre>
 
 Now open `webpack.config.prod.js` and, in the same location, add the following object:
 
 <pre class="prettyprint">
-{
-  test: /\.scss$/,
-  include: [paths.appSrc, paths.appNodeModules],
-  use: [
+  <code class="language-js">
     {
-      loader: require.resolve('style-loader'),
-      options: {
-        sourceMap: shouldUseSourceMap
-      }
+      test: /\.scss$/,
+      include: [paths.appSrc, paths.appNodeModules],
+      use: [
+        {
+          loader: require.resolve('style-loader'),
+          options: {
+            sourceMap: shouldUseSourceMap
+          }
+        },
+        {
+          loader: require.resolve('css-loader'),
+        },
+        require.resolve('resolve-url-loader'),
+        {
+          loader: require.resolve('sass-loader'),
+          options: {
+            sourceMap: shouldUseSourceMap
+          }
+        }
+      ]
     },
-    {
-      loader: require.resolve('css-loader'),
-    },
-    require.resolve('resolve-url-loader'),
-    {
-      loader: require.resolve('sass-loader'),
-      options: {
-        sourceMap: shouldUseSourceMap
-      }
-    }
-  ]
-},
+  </code>
 </pre>
 
 Note the difference between these configurations is the if we are going to generate source maps. In the development configuration, source maps are created by default. In the production configuration the use of source maps is determined by the `shouldUseSourceMap` variable which defaults to 'true' and can be overridden with `process.env.GENERATE_SOURCEMAP`.
