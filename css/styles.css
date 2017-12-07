@@ -195,7 +195,8 @@ iframe {
 }
 
 .social .home {
-  background: #b0b7bf;
+  /* background: #b0b7bf; */
+  background: #FFC0CB;
 }
 
 .social .linkedin {
