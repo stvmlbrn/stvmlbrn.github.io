@@ -35,30 +35,25 @@
 </head>
 
 <body>
-    <div class="nav navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a href="/" class="navbar-brand"><strong>Steve Milburn</strong></a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a>
-                    <li><a href="/about">About Me</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right social list-inline">
-                  <li><a href="https://twitter.com/stvmlbrn" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="https://www.linkedin.com/in/steve-milburn-8b685b94" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a href="https://github.com/stvmlbrn/" target="_blank"><i class="fa fa-github-alt"></i></a></li>
-                  <li><a href="mailto:{{ site.email }}" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <!-- ******HEADER****** -->
+    <section>
+      <header class="header">
+          <div class="container">
+              <!-- <img class="profile-image img-responsive pull-left" src="assets/images/051.jpg" alt="Steve Milburn" /> -->
+              <div class="profile-content pull-left">
+                  <h1 class="name">Steve Milburn</h1>
+                  <h2 class="desc">&lt;Web Developer /&gt;</h2>
+                  <ul class="social list-inline">
+                    <li><a href="/" class="home"><i class="fa fa-home"></i></a></li>
+                    <li><a href="https://twitter.com/{{ site.twitter_username}}" target="_blank" rel="nofollow" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="nofollow" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/{{ site.github_username }}" target="_blank" rel="nofollow" class="github"><i class="fa fa-github-alt"></i></a></li>
+                  </ul>
+              </div><!--//profile-->
+              <!-- <a class="btn btn-cta-primary pull-right" href="http://themes.3rdwavemedia.com/" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>              -->
+          </div><!--//container-->
+      </header><!--//header-->
+    </section>
 
     <div class="container sections-wrapper">
         <div class="row">
@@ -75,9 +70,12 @@
                         {{ content }}
                         <hr/>
                         <h4>Thanks for reading!</h4>
-                        If you found this post useful or have any other feedback, hit
-                        me up on <a href="https://www.twitter.com/stvmlbrn" class="alert-link" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
+                        If you found this post useful or have any other feedback,
+                        <a href="https://www.twitter.com/stvmlbrn" rel="nofollow" class="alert-link" target="_blank">hit me up on  Twitter</a>
                         or leave a comment below. I'd love to hear from you!
+                        <p>
+                          <div class="sharethis-inline-share-buttons"></div>
+                        </p>
                     </div>
                 </section>
 
