@@ -2,7 +2,7 @@
 layout: post
 title: How To Add Sass Support to a Create-React-App Project (after ejecting)
 comments: true
-tags: [react, sass]
+tags: [react, sass, webpack]
 ---
 
 I spent far too much time when I was first getting into React development trying to maintain my own boilerplate for new projects. Even though I don't use any of that old boilerplate code anymore, it wasn't time completely wasted as I learned a good deal about the React ecosystem, especially webpack. But eventually the process became too tedious and, frankly, I wasn't doing anywhere near as good a job as what others had already done. So now I start every new project with `create-react-app` ([https://github.com/facebookincubator/create-react-app](https://github.com/facebookincubator/create-react-app)). It's an incredible tool but it doesn't include support for Sass, which I often use. So I must add that to the configuration and build process manually.
