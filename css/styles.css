@@ -31,6 +31,10 @@ h6 {
   color: #778492;
 }
 
+tagList {
+  padding-left: 50;
+}
+
 pre code {
   overflow: auto;
   word-wrap: normal;

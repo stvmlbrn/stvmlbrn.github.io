@@ -1,0 +1,7 @@
+<span class="tagList">
+  <i class="fa fa-tags"></i>
+  {% for tag in page.tags %}
+    {% capture tag_name %}{{ tag }}{% endcapture %}
+    <a href="/tag/{{ tag_name }}">{{ tag_name }}&nbsp;</a>
+  {% endfor %}
+</span>

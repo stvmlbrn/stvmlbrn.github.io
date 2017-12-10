@@ -2,6 +2,7 @@
 layout: post
 title: How To Add Sass Support to a Create-React-App Project (after ejecting)
 comments: true
+tags: [React, Create-React-App, Sass]
 ---
 
 I spent far too much time when I was first getting into React development trying to maintain my own boilerplate for new projects. Even though I don't use any of that old boilerplate code anymore, it wasn't time completely wasted as I learned a good deal about the React ecosystem, especially webpack. But eventually the process became too tedious and, frankly, I wasn't doing anywhere near as good a job as what others had already done. So now I start every new project with `create-react-app` ([https://github.com/facebookincubator/create-react-app](https://github.com/facebookincubator/create-react-app)). It's an incredible tool but it doesn't include support for Sass, which I often use. So I must add that to the configuration and build process manually.
@@ -12,11 +13,11 @@ By default, `create-react-app` abstracts most of the configuration away so you c
 <i class="fa fa-exclamation-circle"></i> This tutorial assumes you have already setup your project using `create-react-app` and have run `npm run eject`.
 </div>
 
-This first thing we need to do is install 3 packages, `node-Sass`, `Sass-loader`, and `resolve-url-loader`.
+This first thing we need to do is install 3 packages, `node-sass`, `sass-loader`, and `resolve-url-loader`.
 
 <pre class="prettyprint lang-bsh">
   <code class="language-bsh">
-    $ npm i node-Sass Sass-loader resolve-url-loader
+    $ npm i node-sass sass-loader resolve-url-loader
   </code>
 </pre>
 
@@ -39,7 +40,7 @@ With the packages now installed, locate the 2 webpack config files in the `confi
         },
         require.resolve('resolve-url-loader'),
         {
-          loader: require.resolve('Sass-loader'),
+          loader: require.resolve('sass-loader'),
           options: {
             sourceMap: true
           }
@@ -68,7 +69,7 @@ Now open `webpack.config.prod.js` and, in the same location, add the following o
         },
         require.resolve('resolve-url-loader'),
         {
-          loader: require.resolve('Sass-loader'),
+          loader: require.resolve('sass-loader'),
           options: {
             sourceMap: shouldUseSourceMap
           }
@@ -79,6 +80,8 @@ Now open `webpack.config.prod.js` and, in the same location, add the following o
 </pre>
 
 Note the difference between these configurations is the if we are going to generate source maps. In the development configuration, source maps are created by default. In the production configuration the use of source maps is determined by the `shouldUseSourceMap` variable which defaults to 'true' and can be overridden with `process.env.GENERATE_SOURCEMAP`.
+
+
 
 
 
