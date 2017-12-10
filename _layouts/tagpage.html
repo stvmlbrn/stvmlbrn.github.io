@@ -1,14 +1,47 @@
 ---
 layout: default
 ---
-<div class="post">
-<h1>Tag: {{ page.tag }}</h1>
-<ul>
-{% for post in site.tags[page.tag] %}
-  <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
-    {{ post.description }}
-  </li>
-{% endfor %}
-</ul>
-</div>
-<hr>
+
+<div class="container sections-wrapper">
+  <div class="row">
+    <div class="primary col-md-8 col-sm-12 col-xs-12">
+      <section class="projects section">
+        <div class="section-inner">
+          <h1 class="heading">Tag: {{ page.tag }}</h1>
+          <div class="content">
+            {% for post in site.tags[page.tag] %}
+              <div class="item">
+                <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                <span class="text-muted"><i class="fa fa-calendar"></i> {{ post.date | date_to_long_string }}</span>
+                <p class="summary">
+                  {{ post.excerpt }}
+                  <div>
+                    <a href="{{ post.url }}">
+                      <span class="label label-default">
+                        Read more...
+                      </span>
+                    </a>
+                    <span class="pull-right text-muted">
+                      <a href="{{ post.url }}#disqus_thread">
+                        <i class="fa fa-comments"></i> Comments
+                      </a>
+                    </span>
+                  </div>
+                </p>
+                <hr />
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="secondary col-md-4 col-sm-12 col-xs-12">
+      {% include about.html %}
+
+      {% include latestProjects.html %}
+
+      {% include tweets.html %}
+    </div><!--//secondary-->
+  </div><!--//row-->
+</div><!--//masonry-->
