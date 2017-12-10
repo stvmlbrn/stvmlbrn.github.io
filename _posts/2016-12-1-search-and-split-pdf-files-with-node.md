@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Searching and Splitting PDF Files With Node.js
+title: Search and Split PDF Files With Node.js
 comments: true
 tags: [node.js]
 ---
