@@ -2,6 +2,6 @@
   <i class="fa fa-tags"></i>
   {% for tag in page.tags %}
     {% capture tag_name %}{{ tag }}{% endcapture %}
-    <a href="/tag/{{ tag_name | downcase }}">{{ tag_name }}&nbsp;</a>
+    <a href="/tag/{{ tag_name }}">{{ tag_name | upcase }}&nbsp;</a>
   {% endfor %}
 </span>
