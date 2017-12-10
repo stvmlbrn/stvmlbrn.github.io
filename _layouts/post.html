@@ -47,14 +47,11 @@
                         {{ content }}
                         </p>
                         <hr>
-                        <h4>Thanks for reading!</h4>
-                        If you found this post useful or have any other feedback,
-                        <a href="https://www.twitter.com/stvmlbrn" rel="nofollow" class="alert-link" target="_blank">hit me up on  Twitter</a>
-                        or leave a comment below. I'd love to hear from you!
-                        <hr>
-                        <h4><i class="fa fa-share"></i> Share this post</h4>
-                        <div class="sharethis-inline-share-buttons"></div>
-                        <hr/>
+                        <p>
+                          <h4>Thanks for reading!</h4>
+                          If you found this post useful or have any other comments please
+                          leave a comment below. I'd love to hear from you!
+                        </p>
                     </div>
                 </section>
 
@@ -84,6 +81,9 @@
                   </script>
                   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                 {% endif %}
+
+                {% include share.html %}
+
             </div>
 
             <div class="secondary col-md-4 col-sm-12 col-xs-12">
