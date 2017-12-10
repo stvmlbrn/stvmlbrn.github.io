@@ -2,6 +2,7 @@
 layout: post
 title: A Dynamic Catch-All Route Handler For Rendering Views in Express.js
 comments: true
+tags: [node.js, express]
 ---
 
 When developing a Node/Express web app that has a large amount of views it's easy for our view rendering routes to become a bit unwieldy. Another small pain point is remembering to add a route every time we add a new view to the application. Admittedly these are far from the largest problems we'll face when developing our apps, but wouldn't it be nice if we could define a single function to solve both problems?

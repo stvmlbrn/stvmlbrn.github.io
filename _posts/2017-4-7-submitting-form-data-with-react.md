@@ -2,6 +2,7 @@
 layout: post
 title: Submitting Form Data With React
 comments: true
+tags: [react]
 ---
 
 I was reading through a thread on Reddit recently

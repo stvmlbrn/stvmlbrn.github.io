@@ -2,6 +2,7 @@
 layout: post
 title: Considerations When Choosing An NPM Package
 comments: true
+tags: [npm]
 ---
 
 NPM, the package manager for the JavaScript programming language, has become the largest

@@ -2,6 +2,7 @@
 layout: post
 title: Display A 'Loading' Indicator In React During Ajax Requests
 comments: true
+tags: [react, ajax]
 ---
 
 It's good UX to provide visual feedback to the user of web applications

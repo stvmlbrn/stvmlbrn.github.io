@@ -2,6 +2,7 @@
 layout: post
 title: Form Validation Example With React
 comments: true
+tags: [react]
 ---
 
 As I first started to work with React and familiarize myself with it's one-way data bindings, I found
