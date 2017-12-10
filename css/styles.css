@@ -35,6 +35,7 @@ pre code {
   overflow: auto;
   word-wrap: normal;
   white-space: pre;
+  font-size: 13px;
 }
 
 blockquote {
