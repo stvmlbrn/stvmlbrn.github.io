@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   A blog featuring content on any and all things to do with web development
   including node.js, react, javascript, databases, etc.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://blog.stvmlbrn.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: stvmlbrn
 github_username:  stvmlbrn
 linkedin_username: steve-milburn-8b685b94
