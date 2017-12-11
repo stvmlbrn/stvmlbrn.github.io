@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Form Validation Example With React
+title: Form Validation Example With React and Bootstrap
 comments: true
-tags: [react]
+tags: [react, bootstrap]
 ---
 
 As I first started to work with React and familiarize myself with it's one-way data bindings, I found
