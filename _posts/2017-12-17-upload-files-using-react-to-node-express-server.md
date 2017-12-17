@@ -64,7 +64,11 @@ Since we are using disk storage we need to define how we want that to work by sp
     // configure storage
     const storage = multer.diskStorage({
       destination: (req, file, cb) => {
-        cb(null, './uploads'); // files will be saved in the 'uploads' directory
+        /*
+          Files will be saved in the 'uploads' directory. Make
+          sure this directory already exists!
+        */
+        cb(null, './uploads');
       },
       filename: (req, file, cb) => {
         /*
@@ -115,7 +119,11 @@ Putting it all together, the completed server code looks like this:
     // configure storage
     const storage = multer.diskStorage({
       destination: (req, file, cb) => {
-        cb(null, './uploads'); // files will be saved in the 'uploads' directory
+        /*
+          Files will be saved in the 'uploads' directory. Make
+          sure this directory already exists!
+        */
+        cb(null, './uploads');
       },
       filename: (req, file, cb) => {
         /*
