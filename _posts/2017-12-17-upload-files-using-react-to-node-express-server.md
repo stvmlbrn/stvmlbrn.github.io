@@ -103,7 +103,7 @@ The final step is to actually process the uploaded file. We need to modify the P
   </code>
 </pre>
 
-The 'selectedFile' arguments passed to the _upload.single()_ function should match the name of the file field being sent as part of the form submission. Any other form data, such as text inputs, checkbox values, etc., is available in _req.body_ just like when using `body-parser`.
+The 'selectedFile' argument passed to the _upload.single()_ function should match the name of the file field being sent as part of the form submission. Any other form data, such as text inputs, checkbox values, etc., is available in _req.body_ just like when using `body-parser`.
 
 Putting it all together, the completed server code looks like this:
 
