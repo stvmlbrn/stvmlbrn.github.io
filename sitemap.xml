@@ -7,123 +7,73 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://blog.stvmlbrn.com/</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
+  <loc>https://blog.stvmlbrn.com/</loc>
+  <lastmod>2017-12-22T17:23:35+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://blog.stvmlbrn.com/2017/12/06/add-sass-support-to-create-react-app-projects.html</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
+  <loc>https://blog.stvmlbrn.com/2017/12/17/upload-files-using-react-to-node-express-server.html</loc>
+  <lastmod>2017-12-22T17:23:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.stvmlbrn.com/2017/11/25/install-latest-node-version-on-ubuntu.html</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
+  <loc>https://blog.stvmlbrn.com/2017/12/06/add-sass-support-to-create-react-app-projects.html</loc>
+  <lastmod>2017-12-22T17:23:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.stvmlbrn.com/2017/10/14/display-loading-indicator-in-react-during-ajax-requests.html</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
+  <loc>https://blog.stvmlbrn.com/2017/11/25/install-latest-node-version-on-ubuntu.html</loc>
+  <lastmod>2017-12-22T17:23:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.stvmlbrn.com/2017/05/27/considerations-when-choosing-an-npm-package.html</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
+  <loc>https://blog.stvmlbrn.com/2017/10/14/display-loading-indicator-in-react-during-ajax-requests.html</loc>
+  <lastmod>2017-12-22T17:23:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.stvmlbrn.com/2017/04/07/submitting-form-data-with-react.html</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
+  <loc>https://blog.stvmlbrn.com/2017/05/27/considerations-when-choosing-an-npm-package.html</loc>
+  <lastmod>2017-12-22T17:23:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.stvmlbrn.com/2017/01/16/form-validation-with-react.html</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
+  <loc>https://blog.stvmlbrn.com/2017/04/07/submitting-form-data-with-react.html</loc>
+  <lastmod>2017-12-22T17:23:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.stvmlbrn.com/2017/01/08/why-i-left-coldfusion.html</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
+  <loc>https://blog.stvmlbrn.com/2017/01/16/form-validation-with-react.html</loc>
+  <lastmod>2017-12-22T17:23:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.stvmlbrn.com/2016/12/18/a-quick-summary-of-my-first-experience-with-lets-encrypt.html</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
+  <loc>https://blog.stvmlbrn.com/2017/01/08/why-i-left-coldfusion.html</loc>
+  <lastmod>2017-12-22T17:23:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.stvmlbrn.com/2016/12/01/search-and-split-pdf-files-with-node.html</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
+  <loc>https://blog.stvmlbrn.com/2016/12/18/a-quick-summary-of-my-first-experience-with-lets-encrypt.html</loc>
+  <lastmod>2017-12-22T17:23:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.stvmlbrn.com/2016/11/15/like-parameters-using-mysql-package-in-node.html</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
+  <loc>https://blog.stvmlbrn.com/2016/12/01/search-and-split-pdf-files-with-node.html</loc>
+  <lastmod>2017-12-22T17:23:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.stvmlbrn.com/2016/10/13/a-catch-all-route-handler-for-rendering-views-in-express.html</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
+  <loc>https://blog.stvmlbrn.com/2016/11/15/like-parameters-using-mysql-package-in-node.html</loc>
+  <lastmod>2017-12-22T17:23:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.stvmlbrn.com/about/</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
+  <loc>https://blog.stvmlbrn.com/2016/10/13/a-catch-all-route-handler-for-rendering-views-in-express.html</loc>
+  <lastmod>2017-12-22T17:23:35+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://blog.stvmlbrn.com/tag/react</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://blog.stvmlbrn.com/tag/sass</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://blog.stvmlbrn.com/tag/webpack</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://blog.stvmlbrn.com/tag/node.js</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://blog.stvmlbrn.com/tag/ubuntu</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://blog.stvmlbrn.com/tag/npm</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://blog.stvmlbrn.com/tag/ajax</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://blog.stvmlbrn.com/tag/bootstrap</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://blog.stvmlbrn.com/tag/coldfusion</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://blog.stvmlbrn.com/tag/mysql</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://blog.stvmlbrn.com/tag/express</loc>
-  <lastmod>2017-12-11T19:08:54+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://blog.stvmlbrn.com/about/</loc>
+  <lastmod>2017-12-22T17:23:35+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 </urlset>
