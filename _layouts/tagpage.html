@@ -7,7 +7,8 @@ layout: default
     <div class="primary col-md-8 col-sm-12 col-xs-12">
       <section class="projects section">
         <div class="section-inner">
-          <h1 class="heading">Tag: {{ page.tag }}</h1>
+          <h1>Related Posts</h1>
+          <h2 class="heading">Tag: {{ page.tag }}</h2>
           <div class="content">
             {% for post in site.tags[page.tag] %}
               <div class="item">
