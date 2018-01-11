@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How To Upload Files Using React To A Node/Express Server
+title: How To Upload Files With React To A Node/Express Server
 comments: true
 tags: [react, node.js, express]
 ---
