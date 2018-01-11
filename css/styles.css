@@ -31,8 +31,9 @@ h6 {
   color: #778492;
 }
 
-tagList {
-  padding-left: 50;
+.tagList {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 pre code {
