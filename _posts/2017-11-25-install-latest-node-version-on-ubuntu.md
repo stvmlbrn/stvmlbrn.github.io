@@ -5,7 +5,7 @@ comments: true
 tags: [node.js, ubuntu, npm]
 ---
 
-Here is a quick and easy way to install the latest version of Node.js on an Ubuntu system. As with many things in the JavaScript world there is more than one way to do this, but for getting up-and-going quickly I like using `n`.
+Here is a quick and easy way to install the latest version of Node.js on an Ubuntu system. As with many things in the JavaScript world there is more than one way to do this, but for getting up-and-going quickly it's hard to beat `n`.
 
 First, make sure you have `npm` installed:
 
