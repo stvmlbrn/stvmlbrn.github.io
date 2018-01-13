@@ -1,0 +1,16 @@
+<aside class="education aside section">
+    <div class="section-inner">
+        <h2 class="heading">Latest Posts</h2>
+        <div class="content">
+          {% for post in site.posts limit:2 %}
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            {% if forloop.index == 1 %}
+              <p>
+                <hr />
+              </p>
+            {% endif %}
+          {% endfor %}
+        </div><!--//content-->
+    </div><!--//section-inner-->
+</aside><!--//section-->
+
