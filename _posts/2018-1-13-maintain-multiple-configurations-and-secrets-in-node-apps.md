@@ -57,7 +57,7 @@ and then access the settings:
   </code>
 </pre>
 
-Pretty cool, right? The ability to keep these types of settings together is really handy. But the whole point of `config` is to help us manage these configurations across multiple runtime environments. To do this,we need to create a new configuration file for each environment. For example, to add our configuration for the _production_ environment we need to create a _production.json_ in the _config_ folder. The _production.json_ file may look something like this:
+Pretty cool, right? The ability to keep these types of settings together is really handy. But the whole point of `config` is to help us manage these configurations across multiple runtime environments. To do this, we need to create a new configuration file for each environment. For example, to add our configuration for the _production_ environment we need to create a _production.json_ in the _config_ folder. The _production.json_ file may look something like this:
 
 <pre class="prettyprint">
   <code class="language-javascript">
@@ -73,7 +73,7 @@ Notice we don't have to add the entire configuration to the new file. Anything t
 
 __NOTE:__ In case your not sure how to set your runtime environment, on linux you would run `export NODE_ENV=production` prior to starting your application to set your environment to production. On Windows, run `set NODE_ENV=production'.
 
-But we have a glaring problem which you may have already noticed. Our database password is in the configuration. We generally want to keep that out of the codebase and repository for security reasons, so we don't want to include it in `config`. For that, we'll use `dotenv-safe`.
+But we have a glaring problem which you may have already noticed. Our database password is in the configuration. We generally want to keep that out of the codebase and repository for security reasons, so we don't want to include it in `config`. For that we'll use `dotenv-safe`.
 
 The `dotenv-safe` package allows us to define any environment variables we want to keep private. It's worth noting that we are now talking about the environment used by the Node process, not the runtime environment such as development, production, staging, etc. that we refer to when discussing configuration settings with `config`. By default `dotenv-safe` will pull values from a _.env_ file located at the root of the project:
 
@@ -91,7 +91,7 @@ In our example, we want to keep our database password out of the codebase, so th
   </code>
 </pre>
 
-Then, as early as possible in our project code, we need load these environment variables:
+Then, as early as possible in our project code we need load these environment variables:
 
 <pre class="prettyprint">
   <code class="language-javascript">
@@ -130,7 +130,7 @@ With this current setup we can access any runtime environment setting using `con
 <pre class="prettyprint">
   <code class="language-javascript">
     {
-      "Database: {
+      "Database": {
         "password": "DB_PASSWORD"
       }
     }
