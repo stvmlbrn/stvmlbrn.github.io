@@ -5,6 +5,10 @@ comments: true
 tags: [react, bootstrap]
 ---
 
+<div class="alert alert-info">
+  This tutorial works with Bootstrap 3. If you would like to see an updated tutorial using Bootstrap 4 leave a comment below or <a class="alert-link" href="https://www.twitter.com/stvmlbrn">hit me up on Twitter</a>.
+</div>
+
 As I first started to work with React and familiarize myself with it's one-way data bindings, I found
 that I must re-think some of the ways I've solved seemingly trivial problems before. One such issue
 is dealing with custom client-side form validation. There are no shortages of ways and opinions on how to do this,
@@ -19,18 +23,16 @@ While some of this is may be obvious, there are a few objectives I have when per
 * Easily clear all error messages and applied CSS to form controls
 
 So let's take a look at an example sign-up form that asks for an email address, a password, and to
-confirm the password. Here is how we might generate such a form using React with basic Bootstrap styles:
+confirm the password. Here is how we might generate such a form using React with basic Bootstrap styles.
+
+<div class="well well-sm">
+Note: Make sure the Bootstrap CSS is available on your page by including it in your bundle, loading from CDN, or some other method.
+</div>
 
 <pre class="prettyprint">
   <code class="language-javascript">
     import React, {Component} from 'react';
     import {render} from 'react-dom';
-
-    /*
-    This is just some css sprinkled in to help with the layout
-    */
-    import '../css/_bootstrap.scss';
-    import '../css/signin.scss';
 
     class Login extends Component {
       constructor() {
@@ -98,7 +100,7 @@ Which ends up looking something like this in the browser:
 
 ![Basic Signup Form]({{site.url}}/assets/images/posts/react-form-validation-1.png)
 
-Pretty basic stuff so far. To begin the validation, we need a place to hold an input's validation state
+Pretty basic stuff so far. To begin the validation we need a place to hold an input's validation state
 and the message we want to display to the user. To me, it makes sense to keep this in the component's
 state with the input value.
 
@@ -117,8 +119,7 @@ a place to store a message we want to show the user. We have to change the value
 of the form inputs to reflect this change (as well as the onChange() method). Also, let's go ahead an include the error message in the help-text
 block. And, while we are at it, lets setup the dynamically assigned class to each form-group div that
 will apply an error class if the form input is invalid. To dynamically assign classes, the
-[classnames](https://www.npmjs.com/package/classnames) module works perfectly. We need to add an import
-statement for the classnames module:
+`classnames` ([https://www.npmjs.com/package/classnames](https://www.npmjs.com/package/classnames)) package works perfectly.
 
 <pre class="prettyprint">
   <code class="language-javascript">
@@ -267,12 +268,6 @@ That's it! Putting everything together our completed SignUp component looks like
     import {render} from 'react-dom';
     import classNames from 'classnames';
     import validator from 'validator';
-
-    /*
-    This is just some css sprinkled in to help with the layout
-    */
-    import '../css/_bootstrap.scss';
-    import '../css/signin.scss';
 
     class SignUp extends Component {
       constructor() {
