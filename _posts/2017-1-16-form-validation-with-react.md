@@ -13,7 +13,7 @@ as I head down the path of learning something new I don't mind reinventing the w
 it often helps the learning process.
 
 <div class="alert alert-info">
-  This tutorial works with Bootstrap 3. If you would like to see an updated tutorial using Bootstrap 4 leave a comment below or <a class="alert-link" href="https://www.twitter.com/stvmlbrn">hit me up on Twitter</a>.
+  This tutorial works with Bootstrap 3. If you would like to see an updated tutorial using Bootstrap 4 leave a comment below.
 </div>
 
 While some of this is may be obvious, there are a few objectives I have when performing client-side validation:
