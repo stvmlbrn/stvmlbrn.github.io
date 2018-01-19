@@ -50,10 +50,6 @@ server.
         );
       }
     }
-
-    render(
-      &lt;LoadingDemo /&gt;, document.getElementById('app')
-    )
   </code>
 </pre>
 
@@ -155,10 +151,6 @@ Let's put all this together:
         );
       }
     }
-
-    render(
-      &lt;LoadingDemo /&gt;, document.getElementById('app')
-    )
   </code>
 </pre>
 
