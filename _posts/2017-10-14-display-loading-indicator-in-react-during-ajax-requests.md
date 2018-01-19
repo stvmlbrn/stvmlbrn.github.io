@@ -150,14 +150,7 @@ Let's put all this together:
               Check the status of the 'loading' variable. If true, then display
               the loading spinner. Otherwise, display the results.
             */}
-
-            {loading &&
-              &lt;LoadingSpinner /&gt;
-            }
-
-            {!loading &&
-              &lt;ResultsTable results={data} /&gt;
-            }
+            {loading ? &lt;LoadingSpinner /&gt; : &lt;ResultsTable results={data} /&gt;}
           &lt;/div&gt;
         );
       }
