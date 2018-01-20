@@ -71,7 +71,9 @@ Pretty cool, right? The ability to keep these types of settings together is real
 
 Notice we don't have to add the entire configuration to the new file. Anything that may stay the same as the default configuration, such as the database name, username, and password in our example, do not need to be in the _production.json_ file. When the application is run in the production environment, `config.get('Database.host')` will be pulled from the _production.json_ file and revert to the _default.json_ configuration for everything else. To support any other runtime environment that requires different configuration we just need to create a new file  - _staging.json, qa.json,_ etc. and add in the new configuration settings.
 
-__NOTE:__ In case your not sure how to set your runtime environment, on linux you would run `export NODE_ENV=production` prior to starting your application to set your environment to production. On Windows, run `set NODE_ENV=production'.
+<div class="well well-sm">
+NOTE: In case your not sure how to set your runtime environment, on linux you would run 'export NODE_ENV=production' prior to starting your application to set your environment to production. On Windows, run 'set NODE_ENV=production'.
+</div>
 
 But we have a glaring problem which you may have already noticed. Our database password is in the configuration. We generally want to keep that out of the codebase and repository for security reasons, so we don't want to include it in `config`. For that we'll use `dotenv-safe`.
 
@@ -139,9 +141,11 @@ With this current setup we can access any runtime environment setting using `con
 
 Now, when we call `config.get('Database.password')`, `config` will look for an environment variable called "DB_PASSWORD". If it's not found it will use the value found in the _.json_ file that matches our current runtime environment, and if it's not found there it will load from _default.json_.
 
-__NOTE:__ Since we are now keeping the DB_PASSWORD value in _.env_ file, be sure to remove it from the original _default.json_ file we defined at the beginning of this tutorial.
+<div class="well well-sm">
+NOTE: Since we are now keeping the DB_PASSWORD value in .env file, be sure to remove it from the original default.json file we defined at the beginning of this tutorial.
+</div>
 
-And there you have it - `config` and `dotenv-safe` make for a nice setup to manage runtime environment configurations and environment variables!
+So there you have it - `config` and `dotenv-safe` make for a nice setup to manage runtime environment configurations and environment variables!
 
 
 
