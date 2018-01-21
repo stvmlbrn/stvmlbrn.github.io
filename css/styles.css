@@ -14,6 +14,7 @@
 
 body {
   font-family: 'Lato', arial, sans-serif;
+  /* font: 14px sans-serif; */
   color: #434343;
   background: #DAE3E7;
   font-size: 16px;
@@ -26,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: sans-serif;
   font-weight: 700;
   color: #778492;
 }
@@ -340,7 +341,7 @@ iframe {
   margin-bottom: 30px;
 }
 .projects .item .title {
-  font-size: 16px;
+  font-size: 22px;
   margin-top: 0;
   margin-bottom: 5px;
   line-height: 1.5;

@@ -38,11 +38,11 @@
                               <small>{{ page.subtitle }}</small>
                               <br>
                             {% endif %}
-                          <small>
-                            <i class="fa fa-calendar"></i> {{ page.date | date_to_long_string}}
-                          </small>
                         </h1>
-                        {% include tags.html %}
+                        <i class="fa fa-calendar"></i> {{ page.date | date_to_long_string}}
+                        <span class="pull-right">
+                          {% include tags.html %}
+                        </span>
                         <p>
                         {{ content }}
                         </p>

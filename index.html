@@ -20,17 +20,19 @@ title: Steve Milburn
                                   <div>
                                     <a href="{{ post.url }}">
                                       <span class="label label-default">
-                                        Read more...
+                                        Read more <i class="fa fa-arrow-circle-o-right"></i>
                                       </span>
                                     </a>
-                                    <span class="text-muted pull-right">
-                                        <i class="fa fa-tags"></i>
-                                        {% for tag in post.tags %}
-                                          {% capture tag_name %}{{ tag }}{% endcapture %}
-                                          {% if forloop.index > 1 %} | {% endif %}
-                                          <a href="/tag/{{ tag_name }}.html">{{ tag_name | downcase }}&nbsp;</a>
-                                        {% endfor %}
-                                    </span>
+                                    {% if post.tags != blank %}
+                                      <span class="text-muted pull-right">
+                                          <i class="fa fa-tags"></i>
+                                          {% for tag in post.tags %}
+                                            {% capture tag_name %}{{ tag }}{% endcapture %}
+                                            {% if forloop.index > 1 %} | {% endif %}
+                                            <a href="/tag/{{ tag_name }}.html">{{ tag_name | downcase }}&nbsp;</a>
+                                          {% endfor %}
+                                      </span>
+                                    {% endif %}
                                   </div>
                                 </p>
                                 <hr />

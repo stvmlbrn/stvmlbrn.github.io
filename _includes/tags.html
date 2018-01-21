@@ -1,4 +1,5 @@
-<hr />
+<!--
+  <hr />
 <div class="tagList">
   Tags:
   {% for tag in page.tags %}
@@ -8,3 +9,12 @@
   {% endfor %}
 </div>
 <hr />
+-->
+<span class="text-muted pull-right">
+    <i class="fa fa-tags"></i>
+    {% for tag in page.tags %}
+      {% capture tag_name %}{{ tag }}{% endcapture %}
+      {% if forloop.index > 1 %} | {% endif %}
+      <a href="/tag/{{ tag_name }}.html">{{ tag_name | downcase }}&nbsp;</a>
+    {% endfor %}
+</span>
