@@ -6,129 +6,147 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
   <loc>https://blog.stvmlbrn.com/</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
+  <loc>https://blog.stvmlbrn.com/2018/01/20/force-file-download-from-s3-with-node-express.html</loc>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://blog.stvmlbrn.com/2018/01/13/maintain-multiple-configurations-and-secrets-in-node-apps.html</loc>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://blog.stvmlbrn.com/2017/12/17/upload-files-using-react-to-node-express-server.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/2017/12/06/add-sass-support-to-create-react-app-projects.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/2017/11/25/install-latest-node-version-on-ubuntu.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/2017/10/14/display-loading-indicator-in-react-during-ajax-requests.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/2017/05/27/considerations-when-choosing-an-npm-package.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/2017/04/07/submitting-form-data-with-react.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/2017/01/16/form-validation-with-react.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/2017/01/08/why-i-left-coldfusion.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/2016/12/18/a-quick-summary-of-my-first-experience-with-lets-encrypt.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/2016/12/01/search-and-split-pdf-files-with-node.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/2016/11/15/like-parameters-using-mysql-package-in-node.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/2016/10/13/a-catch-all-route-handler-for-rendering-views-in-express.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/about/</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.stvmlbrn.com/tag/react.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
   <loc>https://blog.stvmlbrn.com/tag/node.js.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/tag/express.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://blog.stvmlbrn.com/tag/aws.html</loc>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://blog.stvmlbrn.com/tag/react.html</loc>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/tag/sass.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/tag/webpack.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/tag/ubuntu.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/tag/npm.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/tag/ajax.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/tag/bootstrap.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/tag/coldfusion.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://blog.stvmlbrn.com/tag/mysql.html</loc>
-  <lastmod>2017-12-22T18:13:08+00:00</lastmod>
+  <lastmod>2018-01-20T23:35:18+00:00</lastmod>
   <priority>0.64</priority>
 </url>
+
+
 </urlset>
