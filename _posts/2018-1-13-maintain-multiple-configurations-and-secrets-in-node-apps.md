@@ -127,7 +127,7 @@ The nice thing about `dotenv-safe` over the package it's built upon, `dotenv`, i
 
 Not only can developers use this file to be aware of any environment variables they need to define in their respective _.env_ file, but by default `dotenv-safe` will halt the execution of your program if any variable defined in _.env.example_ is not found in _.env_.
 
-With this current setup we can access any runtime environment setting using `config.get('whatever.setting')` and any private environment variable via `process.env.VARIABLE_NAME`. This works, but we can go a step farther so the only methods we need to use in our code are those offered by the `config` package, as well as take advantage of the hierarchical nature of `config`. We do this by telling `config` what environment variables to expect, and these values will override anything we have defined in the _.json_ configuration files. To do this, we make a new file in the _config_ folder called _custom-environment_variables.json_ which may look something like this:
+With this current setup we can access any runtime environment setting using `config.get('whatever.setting')` and any private environment variable via `process.env.VARIABLE_NAME`. This works, but we can go a step farther so the only methods we need to use in our code are those offered by the `config` package, as well as take advantage of the hierarchical nature of `config`. We do this by telling `config` what environment variables to expect, and these values will override anything we have defined in the _.json_ configuration files. To do this, we make a new file in the _config_ folder called _custom-environment-variables.json_ which may look something like this:
 
 <pre class="prettyprint">
   <code class="language-javascript">
