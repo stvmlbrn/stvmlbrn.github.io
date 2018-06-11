@@ -220,7 +220,6 @@ So with that in place, let's get to work on the _onChange()_ handler. Values in 
 <pre class="prettyprint">
   <code class="language-javascript">
     onChange = (e) => {
-
       switch (e.target.name) {
         case 'selectedFile':
           this.setState({ selectedFile: e.target.files[0] });
@@ -269,8 +268,6 @@ Putting it all together, the complete client-side code now looks like this:
       }
 
       onChange = (e) =&gt; {
-        const state = this.state;
-
         switch (e.target.name) {
           case 'selectedFile':
             this.setState({ selectedFile: e.target.files[0] });
