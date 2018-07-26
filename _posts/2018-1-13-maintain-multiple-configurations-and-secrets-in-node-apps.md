@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Maintain Configuration Settings and Secrets in Node.js Apps
+title: Maintain Environment Configuration Settings and Secrets in Node.js Apps
 comments: true
 tags: [node.js]
 ---
