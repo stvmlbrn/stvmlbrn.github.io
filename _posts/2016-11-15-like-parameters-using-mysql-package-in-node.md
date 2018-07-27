@@ -2,7 +2,8 @@
 layout: post
 title: Performing 'like' Queries Using the MySQL Package in Node.js
 comments: true
-tags: [node.js, mysql]
+tags: [node.js, mysql, database]
+icon: database.png
 ---
 
 The [MySQL package](https://www.npmjs.com/package/mysql) is a hugely popular library for working with MySQL from Node.js, and with good reason. It's performant, easy to use,
