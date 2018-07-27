@@ -602,6 +602,12 @@ iframe {
   }
 }
 
+.titleIcon {
+  width: 100px;
+  float: left;
+  margin-right: 10px;
+}
+
 .smallTitleIcon {
   width: 50px;
   float: left;
