@@ -3,6 +3,7 @@ layout: post
 title: Force File Download From Amazon S3 With Node/Express
 comments: true
 tags: [node.js, express, aws]
+icon: node.png
 ---
 
 Generally, when content is returned from a web server to a browser it is intended to be displayed _inline_, meaning rendered as a web page or as part of a web page. This is especially true for file types such as images, html documents, PDF documents, etc. that can be rendered natively by web browsers. There are times, however, when we would rather have the user be prompted to download and save the file locally. Here is a quick look at how we can send files from S3 (or other remote locations) to be downloaded and saved locally on the client.

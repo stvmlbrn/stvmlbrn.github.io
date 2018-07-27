@@ -3,6 +3,7 @@ layout: post
 title: Need To Allow Public Access To Localhost? Check Out Ngrok
 comments: true
 tags: [node.js, express, utilities]
+icon: gears.png
 ---
 
 During the development process there may be times when you need to allow public access to your local development environment. You may want to demo your progress to a client or test an incoming webhook, for example. With ngrok [(https://ngrok.com)](https://ngrok.com) there is no need to push to production or some other public facing environment in order to accomplish this.

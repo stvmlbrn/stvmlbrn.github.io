@@ -2,7 +2,8 @@
 layout: post
 title: Dynamic 'Where' Clauses With Parameterized Queries in Node.js and MySQL
 comments: true
-tags: [node.js, mysql]
+tags: [node.js, mysql, database]
+icon: database.png
 ---
 
 Occassionally when writing SQL queries the number of fields that we need to filter on may change depending on user selection. Let's take a look at how we can build dynamic 'where' clauses and the corresponding parameter array to handle this scenario.

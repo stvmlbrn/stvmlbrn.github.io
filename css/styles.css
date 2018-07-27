@@ -601,3 +601,20 @@ iframe {
     width: 1360px;
   }
 }
+
+.smallTitleIcon {
+  width: 50px;
+  float: left;
+  padding-right: 10px;
+}
+
+.sidebarLinkDiv {
+  border-bottom: solid 1px;
+  border-color: #dae3e7;
+  margin-bottom: 10px;
+}
+
+.sidebarLinkText {
+  display: inline-block;
+  padding-bottom: 15px;
+}

@@ -3,6 +3,7 @@ layout: post
 title: Test JWT-Authenticated Express Routes with Jest And SuperTest
 comments: true
 tags: [node.js, express]
+icon: javascript.png
 ---
 
 So you have decided to use JSON Web Tokens (JWT) to secure your API, or you are already using JWT and need to add some unit tests for your routes, and you are a little unsure how to acquire, store, and pass the required token to complete the test. Let's take a look at how to do this using [Jest](https://facebook.github.io/jest/) and [SuperTest](https://www.npmjs.com/package/supertest).
