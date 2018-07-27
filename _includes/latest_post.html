@@ -3,15 +3,13 @@
         <h2 class="heading">Most Recent</h2>
         <div class="content">
           {% for post in site.posts limit:4 %}
-            {% if forloop.index > 1 %}
-              <p>
-                <hr />
-              </p>
-            {% endif %}
-            <a href="{{ post.url }}">
-              <img src="/assets/images/{{ post.icon }}" class="smallTitleIcon" />{{ post.title }}
-            </a>
-
+            <div class="sidebarLinkDiv">
+              <div class="sidebarLinkText">
+                <a href="{{ post.url }}">
+                  <img src="/assets/images/{{ post.icon }}" class="smallTitleIcon" />{{ post.title }}
+                </a>
+              </div>
+            </div>
           {% endfor %}
         </div><!--//content-->
     </div><!--//section-inner-->
