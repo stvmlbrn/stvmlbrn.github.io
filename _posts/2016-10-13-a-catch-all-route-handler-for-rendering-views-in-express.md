@@ -3,6 +3,7 @@ layout: post
 title: A Dynamic Catch-All Route Handler For Rendering Views in Express.js
 comments: true
 tags: [node.js, express]
+icon: node.png
 ---
 
 I was recently working on a demo project and found myself constantly creating and deleting views. Rather than having to keep updating my routes I wondered if I could create a dynamic route handler that would match a view with a requested route.

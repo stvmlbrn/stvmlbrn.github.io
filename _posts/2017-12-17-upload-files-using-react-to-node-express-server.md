@@ -3,6 +3,7 @@ layout: post
 title: How To Upload Files With React To A Node/Express Server
 comments: true
 tags: [react, node.js, express]
+icon: react.png
 ---
 
 Handling file uploads in a React/Node/Express application is done a little different on both the server-side and client-side than what you may be used to doing when handling regular form submissions. In this post we'll take a look at code on the server and client for uploading a file from a React application and saving the file on the server using Node.js and Express.

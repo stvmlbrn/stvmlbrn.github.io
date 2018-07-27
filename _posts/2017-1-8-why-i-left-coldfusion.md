@@ -3,6 +3,7 @@ layout: post
 title: Why I Left ColdFusion
 comments: true
 tags: [coldfusion]
+icon: coldfusion.png
 ---
 
 I recently observed a Twitter discussion with some former (and soon to be former) ColdFusion developers, most notably

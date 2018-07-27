@@ -3,6 +3,7 @@ layout: post
 title: A Quick Summary Of My First Experience With Let's Encrypt
 comments: true
 tags: [nginx]
+icon: gears.png
 ---
 
 If you are not familiar with [Let's Encrypt](https://letsencrypt.org), it is "a free, automated, and

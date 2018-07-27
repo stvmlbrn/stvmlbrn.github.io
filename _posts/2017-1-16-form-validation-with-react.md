@@ -3,6 +3,7 @@ layout: post
 title: Custom Form Validation Example With React and Bootstrap
 comments: true
 tags: [react, bootstrap]
+icon: react.png
 ---
 
 As I first started to work with React and familiarize myself with it's one-way data bindings, I found
