@@ -64,7 +64,7 @@ Let put it all together:
       }
       if (color !== 'all') {
         sql += ' and color = ?';
-        params.push(color');
+        params.push(color);
       }
 
       connection.query(sql, params, (error, results, fields) => {
