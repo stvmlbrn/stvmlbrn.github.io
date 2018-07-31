@@ -13,8 +13,6 @@
  */
 
 body {
-  font-family: 'Lato', arial, sans-serif;
-  /* font: 14px sans-serif; */
   color: #434343;
   background: #DAE3E7;
   font-size: 16px;
@@ -28,7 +26,7 @@ h4,
 h5,
 h6 {
   font-family: sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   color: #778492;
 }
 
