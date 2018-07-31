@@ -51,10 +51,7 @@
                         <p>
                           <h4>Thanks for reading!</h4>
                           If you found this post useful or have any other comments please
-                          leave a comment below. I'd love to hear from you.
-                        </p>
-                        <p>
-                          <hr />
+                          leave a comment below.
                         </p>
                         <p>
                           <hr />
@@ -78,9 +75,10 @@
             </div>
 
             <div class="secondary col-md-4 col-sm-12 col-xs-12">
+              {% include cronAlarm.html %}
               {% include popular_posts.html %}
-              {% include sideBlockAd.html %}
               {% include latest_post.html %}
+              {% include sideBlockAd.html %}
           </div><!--//secondary-->
         </div>
     </div>
