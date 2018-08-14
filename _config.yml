@@ -34,3 +34,4 @@ exclude:
   - Gemfile.lock
 tag_page_layout: tagpage
 tag_page_dir: tag
+paginate: 5
