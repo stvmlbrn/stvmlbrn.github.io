@@ -14,8 +14,7 @@ While some of this is may be obvious, there are a few objectives I have when per
 * Be able to customize the error message based on the validation criteria that failed
 * Easily clear all error messages and applied CSS to form controls
 
-So let's take a look at an example sign-up form that asks for an email address, a password, and to
-confirm the password. Here is how we might generate such a form using React with basic Bootstrap styles.
+So let's take a look at an example sign-up form that asks for an email address, a password, and to confirm the password. Here is how we might generate such a form using React with basic Bootstrap styles.
 
 <div class="well well-sm">
 Note: Make sure the Bootstrap CSS is available on your page by including it in your bundle, loading from CDN, or some other method.
@@ -121,7 +120,7 @@ Pretty basic stuff so far. To begin the validation we need a place to hold an in
   </code>
 </pre>
 
-So now for each input we have a place to store its value, its validation state (defaulted to true), and a place to store a message we want to show the user. We have to change the value attribute on each of the form inputs to reflect this change. We'll also need to update the onChange() method, and since we are now dealiing with objects we need to be careful to not mutate state directly. Also, let's go ahead an include the error message in the help-text block. And, while we are at it lets setup the dynamically assigned class to each form-group div that will apply an error class if the form input is invalid.
+So now for each input we have a place to store its value, its validation state (defaulted to true), and a place to store a message we want to show the user. We have to change the value attribute on each of the form inputs to reflect this change. We'll also need to update the onChange() method. Also, let's go ahead an include the error message in the help-text block. And, while we are at it lets setup the dynamically assigned class to each form-group div that will apply an error class if the form input is invalid.
 
 To dynamically assign classes, the `classnames` ([https://www.npmjs.com/package/classnames](https://www.npmjs.com/package/classnames)) package works perfectly.
 
@@ -131,7 +130,7 @@ To dynamically assign classes, the `classnames` ([https://www.npmjs.com/package/
   </code>
 </pre>
 
-Update the onChange() method, being careful not to directly mutate state:
+Update the onChange() method:
 
 <pre class="prettyprint">
   <code class="language-javascript">
