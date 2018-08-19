@@ -32,7 +32,7 @@ Note: Make sure the Bootstrap CSS is available on your page by including it in y
       }
 
       onChange = (e) => {
-        this.setState({ [e.target.name]: e.target.state });
+        this.setState({ [e.target.name]: e.target.value });
       }
 
       onSubmit = (e) => {
