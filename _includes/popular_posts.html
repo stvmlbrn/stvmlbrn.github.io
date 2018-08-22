@@ -4,10 +4,13 @@
         <div class="content">
           {% for post in site.posts %}
             {% if post.popular %}
-              <div class="sidebarLinkText">
-                <a href="{{ site.url }}/{{ post.url }}">
-                  <img src="/assets/images/{{ post.icon }}" class="smallTitleIcon" /> {{ post.title }}
-                </a>
+              <div class="sidebarLinkDiv">
+                <div class="sidebarLinkText">
+                  <a href="{{ site.url }}/{{ post.url }}">
+                    <img src="/assets/images/{{ post.icon }}" class="smallTitleIcon" />
+                    {{ post.title }}
+                  </a>
+                </div>
               </div>
             {% endif %}
           {% endfor %}
