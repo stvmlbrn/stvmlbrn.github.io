@@ -100,7 +100,7 @@ I can go into more detail about the content of particular lessons if anyone is i
 
 * I introduce functions earlier than a lot of other beginner tutorials I see. I think it would help with subsuquent lessons to have a basic understanding of functions.
 * The Advanced Functions lesson is where we get into more advanced topics such as parameter destructuring, default values, arguments[], rest parameters, etc.
-* There is a lot to cover with arrays! Part 1 is basic array syntax, push/pop, slice, etc. Part 2 we get into iteration methods such as .map(), .forEach(), .filter(), etc.
+* There is a lot to cover with arrays! Part 1 is basic array syntax, push(), pop(), slice(), etc. Part 2 we get into iteration methods such as .map(), .forEach(), .filter(), etc.
 * The JavaScript Ecosystem lesson may seem out of place. That is Thanksgiving week and I wasn't going to assign any homework. Instead, I thought we would switch gears for a bit and I'd do a brief presentation on a lot of buzzwords and what they mean (frameworks, build tools, etc).
 
 So, whatcha think? is there anything you would change or do different?
