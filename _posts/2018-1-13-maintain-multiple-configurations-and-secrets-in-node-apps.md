@@ -4,6 +4,7 @@ title: Maintain Environment Configuration Settings and Secrets in Node.js Apps
 comments: true
 tags: [node.js]
 icon: node.png
+popular: true
 ---
 
 During the software development process your application will likely need to adapt to multiple runtime environments. At a minimum you'll hopefully have at least 2 runtime environments: development and production. Additional runtime environments such as testing and staging are also common. Each of these runtime environments will likely require different configurations for things such as database connection information, log settings, port, and so on. In addition to these configurations you may also have settings that may be unique to each developer on the team such as usernames/passwords and API keys. These "secrets" shouldn't be included in the codebase or repository and are best used as environment variables, but we still need a way to maintain them. Let's look at 2 packages that when used together create a nice solution to this problem.

@@ -4,6 +4,7 @@ title: Submitting Form Data With React
 comments: true
 tags: [react]
 icon: react.png
+popular: true
 ---
 
 I was reading through a thread on Reddit recently

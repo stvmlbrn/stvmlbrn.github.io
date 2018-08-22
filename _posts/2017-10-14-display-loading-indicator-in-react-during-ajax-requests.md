@@ -4,6 +4,7 @@ title: Display A 'Loading' Indicator In React During Ajax Requests
 comments: true
 tags: [react, ajax]
 icon: react.png
+popular: true
 ---
 
 It's good UX to provide visual feedback to the user of web applications
