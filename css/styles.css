@@ -622,6 +622,10 @@ iframe {
   margin-bottom: 10px;
 }
 
+.sidebarLinkDiv img {
+  padding-top: 0;
+}
+
 .sidebarLinkText {
   display: inline-block;
   padding-bottom: 15px;
