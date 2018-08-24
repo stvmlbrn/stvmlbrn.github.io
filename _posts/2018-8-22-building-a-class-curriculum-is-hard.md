@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thoughts On A Community College JavaScript Class Curriculum
+title: Building A Class Curriculum Is Hard!
 comments: true
 tags: [javascript]
 icon: javascript.png
