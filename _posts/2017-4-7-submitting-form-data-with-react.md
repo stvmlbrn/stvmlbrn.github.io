@@ -14,8 +14,8 @@ to put together an example addressing each of the issues (s)he is having.
 
 #### "Getting a value from a form or user input seems insanely complicated"
 
-This is an example of where the adage "thinking in React" really applies. It's best not to think
-in terms of "getting data from a form or user input". You get your data from your "state". So during
+It's best not to think
+in terms of "getting data from a form or user input". You get your data from your _state_. So during
 development the task you should be thinking about is "how do I put the value of the user input into
 my state". To do so, use the `onChange()` event handler on the input fields. Here
 is a simple example:
@@ -69,7 +69,7 @@ make perfect sense how we want to handle the form submission. In reality, it's n
 what your probably used to doing.
 
 Working from our example above, let's create an `onSubmit()` function and attach that to the form. I like
-to use [Axios](https://www.npmjs.com/package/axios) but there are any number of tools that are suitable for this, such as SuperAgent, Fetch, and of couse, jQuery.
+to use [Axios](https://www.npmjs.com/package/axios) but there are any number of tools that are suitable for this, such as Fetch and SuperAgent.
 
 <pre class="prettyprint">
   <code class="language-javascript">
