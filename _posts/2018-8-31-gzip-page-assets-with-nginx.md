@@ -11,7 +11,7 @@ This is something I feel like I should have known, but didn't. By default, Nginx
 The image below shows gzip section in the default `nginx.conf` file. As you can see, gzip is turned on but the _gzip_types_ directive is commented out.
 <img src="/assets/images/posts/nginx-gzip.png">
 
-To enable gzip compression for MIME-types other than `text/html` this line should be uncommented and include a list of MIME-types that you want Nginx to compress. There are already a few types listed, but a more complete list [can be found here](https://github.com/h5bp/server-configs-nginx/blob/master/nginx.conf#L67-L109) to give you some additional possibilities.
+To enable gzip compression for MIME-types other than `text/html` this line should be uncommented and include a list of MIME-types that you want Nginx to compress (or override this setting per-application rather than in the global config). There are already a few types listed, but a more complete list [can be found here](https://github.com/h5bp/server-configs-nginx/blob/master/nginx.conf#L67-L109) to give you some additional possibilities.
 
 <div class="well well-sm">
   <strong>
