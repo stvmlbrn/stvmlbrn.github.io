@@ -1,10 +1,69 @@
-<footer class="footer">
-    <div class="container text-center">
-            <small class="copyright">
-              <a href="/">Home</a> | <a href="/about">About</a> | <a href="/contact">Contact</a><br/>
-              ----------------------------------------------<br/>
-              Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers
-            </small>
-    </div><!--//container-->
-
-</footer><!--//footer-->
+<footer id="colophon" class="site-footer">
+  <div class="footer-columns clear">
+    <div class="container clear">
+      <div class="footer-column footer-column-1">
+        <div class="text-2 widget footer-widget widget_text">
+          <h3 class="widget-title">Recent Tweets</h3>
+        </div>
+      </div>
+      <div class="footer-column footer-column-2">
+        <div id="recent-posts-3" class="widget footer-widget widget_recent_entries">
+          <h3 class="widget-title">Recent Posts</h3>
+          <ul>
+            {% for post in site.posts limit:4 %}
+              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="footer-column footer-column-3">
+        <div id="categories-3" class="widget footer-widget widget_categories">
+          <h3 class="widget-title">Popular Posts</h3>
+          <ul>
+            {% for post in site.posts %}
+              {% if post.popular %}
+                <li>
+                  <a href="{{ site.url }}/{{ post.url }}">{{ post.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="footer-column footer-column-4">
+        <div id="search-3" class="widget footer-widget widget_search">
+          <h3 class="widget-title">Search</h3>
+          <form action="" class="search-form">
+            <label>
+              <span class="screen-reader-text">Search for:</span>
+              <input type="search" placeholder="Search..." class="search-field">
+            </label>
+            <input type="submit" class="search-submit" value="Search">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear">
+    <div id="site-bottom" class="clear">
+      <div class="container">
+        <div class="site-info">
+          &copy; Steve Milburn
+        </div>
+        <div class="menu-primary-menu-container">
+          <ul id="footer-menu" class="footer-nav">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <a href="/">Home</a>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <a href="/">Contact</a>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <a href="/">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

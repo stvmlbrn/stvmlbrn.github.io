@@ -3,31 +3,68 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <meta name="google-site-verification" content="IvndBsIBQasLEJ0UrOzBTZK2gXgJ4f4JLBSJuhVN3IE" />
     {% include head.html %}
 </head>
 
 <body>
-    <!-- ******HEADER****** -->
-    <header class="header">
-        <div class="container">
-            <!-- <img class="profile-image img-responsive pull-left" src="assets/images/051.jpg" alt="Steve Milburn" /> -->
-            <div class="profile-content pull-left">
-                <h1 class="name">Steve Milburn</h1>
-                <ul class="social list-inline">
-                  <li><a href="/" class="home"><i class="fa fa-home"></i></a></li>
-                  <li><a href="https://twitter.com/{{ site.twitter_username}}" target="_blank" rel="nofollow" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="/contact" class="contact"><i class="fa fa-envelope"></i></a></li>
-                </ul>
-            </div><!--//profile-->
-            <!-- <a class="btn btn-cta-primary pull-right" href="http://themes.3rdwavemedia.com/" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>              -->
-        </div><!--//container-->
-    </header><!--//header-->
+  <div id="page" class="site">
+    {% include masthead.html %}
 
-    {{ content }}
+    <div id="content" class="site-content container clear">
+      <div id="primary" class="content-area clear">
+        {{ content }}
+      </div>
+      <aside id="secondary" class="widget-area sidebar">
+          <div id="recent-posts-2" class="widget widget_recent_entries">
+            <h2 class="widget-title">Popular Posts</h2>
+            <ul>
+              {% for post in site.posts %}
+                {% if post.popular %}
+                  <li>
+                    <a href="{{ site.url }}/{{ post.url }}">{{ post.title }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+          <div id="media_image-2" class="widget widget_media_image">
 
-    <!-- ******FOOTER****** -->
+          </div>
+          <div id="search-2" class="widget widget_search">
+            <form action="" class="search-form">
+              <label>
+                <span class="screen-reader-text">Search for:</span>
+                <input type="search" class="search-field" placeholder="Search...">
+              </label>
+              <input type="submit" value="Search" class="search-submit">
+            </form>
+          </div>
+
+          <div id="recent-posts-2-test" class="widget widget_recent_entries">
+              <h2 class="widget-title">Recent Posts</h2>
+              <ul>
+                {% for post in site.posts limit:4 %}
+                  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          <!-- <div id="tag_cloud-2" class="widget widget_tag_cloud">
+            <h2 class="widget-title">Tags</h2>
+            <div class="tagcloud">
+              <a href="/" class="tag-cloud-link tag-link-16 tag-link-position-1">React</a>
+              <a href="/" class="tag-cloud-link tag-link">Node</a>
+              <a href="/" class="tag-cloud-link tag-link">JavaScript</a>
+              <a href="/" class="tag-cloud-link tag-link">Express</a>
+            </div>
+          </div> -->
+        </aside>
+    </div>
+
+
+
     {% include footer.html %}
+
+  </div>
 </body>
 </html>
 
