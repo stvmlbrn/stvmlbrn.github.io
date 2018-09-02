@@ -2811,11 +2811,13 @@ img {
 }
 
 pre {
+  margin-bottom: 15px;
+}
+pre code {
   overflow: auto;
   word-wrap: normal;
   white-space: pre;
   font-size: .85em;
-  margin-bottom: 15px;
 }
 
 code.highlighter-rouge {
