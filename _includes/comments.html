@@ -1,9 +1,7 @@
 {% if page.comments and jekyll.environment == 'production' %}
-  <section class="projects section">
-    <div class="section-inner">
-        <div id="disqus_thread"></div>
-    </div>
-  </section>
+  <div id="comments" class="comments-area">
+    <div id="disqus_thread"></div>
+  </div>
 
   <script>
   /**

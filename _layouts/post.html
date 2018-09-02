@@ -3,89 +3,83 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-  {% include head.html %}
+    {% include head.html %}
 </head>
 
-<body>
-    <!-- ******HEADER****** -->
-    <section>
-      <header class="header">
-          <div class="container">
-              <!-- <img class="profile-image img-responsive pull-left" src="assets/images/051.jpg" alt="Steve Milburn" /> -->
-              <div class="profile-content pull-left">
-                  <h1 class="name">Steve Milburn</h1>
-                  <ul class="social list-inline">
-                    <li><a href="/" class="home"><i class="fa fa-home"></i></a></li>
-                    <li><a href="https://twitter.com/{{ site.twitter_username}}" target="_blank" rel="nofollow" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="/contact" class="contact"><i class="fa fa-envelope"></i></a></li>
-                  </ul>
-              </div><!--//profile-->
-              <!-- <a class="btn btn-cta-primary pull-right" href="http://themes.3rdwavemedia.com/" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a> -->
-          </div><!--//container-->
-      </header><!--//header-->
-    </section>
+<body class="post-template-default single single-post single-format-standard">
+  <div id="page" class="site">
+    {% include masthead.html %}
 
-    <div class="container sections-wrapper">
-        <div class="row">
-            <div class="primary col-md-8 col-sm-12 col-xs-12">
-                <section class="projects section">
-                    <div class="section-inner">
-                        <h1 class="heading">
-                            {{ page.title }}<br/>
-                            {% if page.subtitle %}
-                              <small>{{ page.subtitle }}</small>
-                              <br>
-                            {% endif %}
-                        </h1>
-                        <i class="fa fa-calendar"></i> {{ page.date | date_to_long_string}}
-                        <span class="pull-right">
-                          {% include tags.html %}
-                        </span>
-                        <div class="sharethis-inline-share-buttons" style="padding-top:10px"></div>
-                        <p>
-                        {{ content }}
-                        </p>
-                        <hr>
-                        <p>
-                          <h4>Thanks for reading!</h4>
-                          If you found this post useful or have any other comments please
-                          leave a comment below.
-                        </p>
-                        <p>
-                          <hr />
-                        </p>
-                        <p class="text-center">
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <ins class="adsbygoogle"
-                              style="display:block; text-align:center;"
-                              data-ad-layout="in-article"
-                              data-ad-format="fluid"
-                              data-ad-client="ca-pub-2780132881884687"
-                              data-ad-slot="4900851391"></ins>
-                            <script>
-                              (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>
-                        </p>
-                    </div>
-                </section>
-
-                {% include comments.html %}
+    <div id="content" class="site-content container clear">
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+          <article class="post type-post status-publish format-standard hentry">
+            <header class="entry-header">
+              <h1 class="entry-title">{{ page.title }}</h1>
+              <div class="entry-meta">
+                <!--<span class="entry-author"><?php the_author_posts_link(); ?></span>  -->
+                <span class="entry-date">{{ page.date | date_to_long_string }}</span>
+                <!--<span class="entry-comment"><?php comments_popup_link( __('Leave a Comment','revenue'), __('1 Comment', 'revenue'), '% Comments', 'comments-link', __('comments off', 'revenue'));?></span>-->
+              </div>
+            </header>
+            <div class="entry-category">
+              <span class="tag-links">
+                {% include tags.html %}
+              </span>
+            </div>
+            <div class="sharethis-inline-share-buttons" style="padding-top:10px"></div>
+            <div class="entry-content">
+              {{ content }}
             </div>
 
-            <div class="secondary col-md-4 col-sm-12 col-xs-12">
-              {% include sideBlockAd.html %}
-              {% include popular_posts.html %}
-              {% include latest_post.html %}
-          </div><!--//secondary-->
+            {% include comments.html %}
+          </article>
+        </main>
+      </div>
+      <aside id="secondary" class="widget-area sidebar">
+        <div id="recent-posts-2" class="widget widget_recent_entries">
+          <h2 class="widget-title">Popular Posts</h2>
+          <ul>
+            {% for post in site.posts %}
+              {% if post.popular %}
+                <li>
+                  <a href="{{ site.url }}/{{ post.url }}">{{ post.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
         </div>
+        <div id="media_image-2" class="widget widget_media_image">
+          {% include sideBlockAd.html %}
+        </div>
+        <!--
+        <div id="search-2" class="widget widget_search">
+          <form action="" class="search-form">
+            <label>
+              <span class="screen-reader-text">Search for:</span>
+              <input type="search" class="search-field" placeholder="Search...">
+            </label>
+            <input type="submit" value="Search" class="search-submit">
+          </form>
+        </div>
+      -->
+
+        <div id="recent-posts-2-test" class="widget widget_recent_entries">
+            <h2 class="widget-title">Recent Posts</h2>
+            <ul>
+              {% for post in site.posts limit:4 %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+      </aside>
     </div>
 
-    <!-- ******FOOTER****** -->
+
+
     {% include footer.html %}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js'></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script id="dsq-count-scr" src="//stvmlbrn.disqus.com/count.js" async></script>
+
+  </div>
 </body>
 </html>
 

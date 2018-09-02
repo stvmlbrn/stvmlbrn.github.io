@@ -18,8 +18,16 @@ title: Steve Milburn
             </div><!-- .thumbnail-wrap -->
           </a>
 
-          <div class="entry-category">
+          <!-- <div class="entry-category">
             <a href="/">test category</a>
+          </div> -->
+          <div class="entry-category">
+            <span class="tag-links">
+              {% for tag in post.tags %}
+                {% capture tag_name %}{{ tag }}{% endcapture %}
+                <a href="/tag/{{ tag_name }}.html">{{ tag_name | downcase }}&nbsp;</a>
+              {% endfor %}
+            </span>
           </div>
 
           <h2 class="entry-title">

@@ -612,15 +612,23 @@ a {
 --------------------------------------------------------------*/
 .site-branding {
 	float: left;
-	text-align: left;
+  text-align: left;
 	#logo {
-		height: 75px;
+    height: 75px;
+    font-size: 2.5em;
+    font-weight: 600;
 	}
 	.helper {
 	    display: inline-block;
 	    height: 100%;
 	    vertical-align: middle;
-	}
+  }
+  .home-link {
+    color: #848484;
+    a:hover {
+      text-decoration: none;
+    }
+  }
 	img {
 	    max-height: 75px;
 	    vertical-align: middle;
@@ -1031,9 +1039,9 @@ a {
 		.entry-comment,
 		.entry-date {
 			position: relative;
-			margin-left: 11px;
-			padding-left: 15px;
-			&:before {
+			//margin-left: 11px;
+			//padding-left: 15px;
+			/* &:before {
 				background-color: #ccc;
 				border-radius: 50%;
 				color: #aaa;
@@ -1044,7 +1052,7 @@ a {
 				position: absolute;
 				left: 0;
 				top: 6px;
-			}
+			} */
 		}
 
 	}
@@ -1321,7 +1329,7 @@ a {
 
 /* Entry Tags */
 .entry-tags {
-	margin-bottom: -5px;
+	margin-bottom: 10px;
 	span {
 		font-size: 13px;
 		margin-right: 10px;
@@ -2800,4 +2808,19 @@ img {
 
 #slick-mobile-menu {
 	width: 100%;
+}
+
+pre {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+  font-size: .85em;
+}
+
+code.highlighter-rouge {
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  background-color: #eef;
+  color: #c7254e;
+  padding: 1px 5px;
 }

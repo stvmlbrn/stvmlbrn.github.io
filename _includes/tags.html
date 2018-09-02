@@ -1,8 +1,5 @@
-<span class="text-muted pull-right">
-    <i class="fa fa-tag"></i>
-    {% for tag in page.tags %}
-      {% capture tag_name %}{{ tag }}{% endcapture %}
-      {% if forloop.index > 1 %} | {% endif %}
-      <a href="/tag/{{ tag_name }}.html">{{ tag_name | downcase }}&nbsp;</a>
-    {% endfor %}
-</span>
+
+{% for tag in page.tags %}
+  {% capture tag_name %}{{ tag }}{% endcapture %}
+  <a href="/tag/{{ tag_name }}.html">{{ tag_name | downcase }}&nbsp;</a>
+{% endfor %}

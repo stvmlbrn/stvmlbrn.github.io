@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  {% include head.html %}
+</head>
+
+<body>
+    <!-- ******HEADER****** -->
+    <section>
+      <header class="header">
+          <div class="container">
+              <!-- <img class="profile-image img-responsive pull-left" src="assets/images/051.jpg" alt="Steve Milburn" /> -->
+              <div class="profile-content pull-left">
+                  <h1 class="name">Steve Milburn</h1>
+                  <ul class="social list-inline">
+                    <li><a href="/" class="home"><i class="fa fa-home"></i></a></li>
+                    <li><a href="https://twitter.com/{{ site.twitter_username}}" target="_blank" rel="nofollow" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="/contact" class="contact"><i class="fa fa-envelope"></i></a></li>
+                  </ul>
+              </div><!--//profile-->
+              <!-- <a class="btn btn-cta-primary pull-right" href="http://themes.3rdwavemedia.com/" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a> -->
+          </div><!--//container-->
+      </header><!--//header-->
+    </section>
+
+    <div class="container sections-wrapper">
+        <div class="row">
+            <div class="primary col-md-8 col-sm-12 col-xs-12">
+                <section class="projects section">
+                    <div class="section-inner">
+                        <h1 class="heading">
+                            {{ page.title }}<br/>
+                            {% if page.subtitle %}
+                              <small>{{ page.subtitle }}</small>
+                              <br>
+                            {% endif %}
+                        </h1>
+                        <i class="fa fa-calendar"></i> {{ page.date | date_to_long_string}}
+                        <span class="pull-right">
+                          {% include tags.html %}
+                        </span>
+                        <div class="sharethis-inline-share-buttons" style="padding-top:10px"></div>
+                        <p>
+                        {{ content }}
+                        </p>
+                        <hr>
+                        <p>
+                          <h4>Thanks for reading!</h4>
+                          If you found this post useful or have any other comments please
+                          leave a comment below.
+                        </p>
+                        <p>
+                          <hr />
+                        </p>
+                        <p class="text-center">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <ins class="adsbygoogle"
+                              style="display:block; text-align:center;"
+                              data-ad-layout="in-article"
+                              data-ad-format="fluid"
+                              data-ad-client="ca-pub-2780132881884687"
+                              data-ad-slot="4900851391"></ins>
+                            <script>
+                              (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </p>
+                    </div>
+                </section>
+
+                {% include comments.html %}
+            </div>
+
+            <div class="secondary col-md-4 col-sm-12 col-xs-12">
+              {% include sideBlockAd.html %}
+              {% include popular_posts.html %}
+              {% include latest_post.html %}
+          </div><!--//secondary-->
+        </div>
+    </div>
+
+    <!-- ******FOOTER****** -->
+    {% include footer.html %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script id="dsq-count-scr" src="//stvmlbrn.disqus.com/count.js" async></script>
+</body>
+</html>
+
