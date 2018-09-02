@@ -4,17 +4,17 @@ title: Contact Me
 ---
 <main id="main" class="site-main clear">
   <div id="page" class="site">
-      <p>
+      <p class="bottom-padded">
         Have a question you want answered or maybe something you want me to write about? Use the contact form below
         and I'll do my best to respond or post an entry to the blog related to your inquiry.
       </p>
-      <p>
+      <p class="bottom-padded">
         If you are asking about a particular blog entry, please include the URL of the entry your asking about.
       </p>
-      <p>
+      <p class="bottom-padded">
         If you have any other questions or comments, or just want to get in touch, fire away! I love to hear from people reading my blog.
       </p>
-      <p>
+      <p class="bottom-padded">
         <form class="form-horizontal" action="//formspree.io/scmilburn@gmail.com" method="POST" id="contactform">
           <input type="hidden" name="_next" value="/thanks" />
           <input type="hidden" name="_subject" id="_subject" value="Blog Contact Form" />
@@ -25,21 +25,21 @@ title: Contact Me
           <div class="form-group">
             <label for="contact_name" class="control-label col-md-2">Name</label>
             <div class="col-md-10">
-              <input type="text" class="form-control" name="name" id="contact_name" required="" />
+              <input type="text" class="form-control" name="name" id="contact_name" required="" size="50" autofocus />
             </div>
           </div>
 
           <div class="form-group">
             <label for="email" class="control-label col-md-2">Email</label>
             <div class="col-md-10">
-              <input type="email" name="_replyto" id="email" required="" class="form-control" />
+              <input type="email" name="_replyto" id="email" required="" class="form-control" size="50" />
             </div>
           </div>
 
           <div class="form-group">
             <label for="contact_comments" class="control-label col-md-2">Comments</label>
             <div class="col-md-10">
-              <textarea name="comments" id="contact_comments" required="" class="form-control" rows="5"></textarea>
+              <textarea name="comments" id="contact_comments" required="" class="form-control" cols="75" rows="5"></textarea>
             </div>
           </div>
 
