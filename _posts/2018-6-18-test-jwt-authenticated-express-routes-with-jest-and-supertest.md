@@ -15,7 +15,10 @@ The first thing we need to do is get a token from the API. To do so we can lever
     const request = require('supertest');
     const app = require('../app'); // the express server
 
-    // declare the token variable in a scope accessible by the entire test suite
+    /*
+      declare the token variable in a scope accessible
+      by the entire test suite
+    */
     let token;
 
     beforeAll((done) => {
@@ -42,7 +45,10 @@ So now that we are authenticated and have a token it's just a matter of passing 
     const request = require('supertest');
     const app = require('../app'); // the express server
 
-    // declare the token variable in a scope accessible by the entire test suite
+    /*
+      declare the token variable in a scope accessible
+      by the entire test suite
+    */
     let token;
 
     beforeAll((done) => {
@@ -67,10 +73,11 @@ So now that we are authenticated and have a token it's just a matter of passing 
             expect(response.statusCode).toBe(401);
           });
       });
+      // send the token - should respond with a 200
       test('It responds with JSON', () => {
         return request(app)
           .get('/')
-          .set('Authorization', `Bearer ${token}`) // send the token!!
+          .set('Authorization', `Bearer ${token}`)
           .then((response) => {
             expect(response.statusCode).toBe(200);
             expect(response.type).toBe('application/json');

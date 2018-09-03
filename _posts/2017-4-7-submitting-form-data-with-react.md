@@ -35,8 +35,11 @@ is a simple example:
       }
 
       onChange = (e) =&gt; {
-        // Because we named the inputs to match their corresponding values in state, it's
-        // super easy to update the state
+        /*
+          Because we named the inputs to match their
+          corresponding values in state, it's
+          super easy to update the state
+        */
         this.setState({ [e.target.name]: e.target.value });
       }
 
@@ -44,9 +47,24 @@ is a simple example:
         const { fname, lname, email } = this.state;
         return (
           &lt;form&gt;
-            &lt;input type="text" name="fname" value={fname} onChange={this.onChange} /&gt;
-            &lt;input type="text" name="lname" value={lname} onChange={this.onChange} /&gt;
-            &lt;input type="text" name="email" value={email} onChange={this.onChange} /&gt;
+            &lt;input
+              type="text"
+              name="fname"
+              value={fname}
+              onChange={this.onChange}
+            /&gt;
+            &lt;input
+              type="text"
+              name="lname"
+              value={lname}
+              onChange={this.onChange}
+            /&gt;
+            &lt;input
+              type="text"
+              name="email"
+              value={email}
+              onChange={this.onChange}
+            /&gt;
           &lt;/form&gt;
         );
       }
@@ -87,8 +105,11 @@ to use [Axios](https://www.npmjs.com/package/axios) but there are any number of 
       }
 
       onChange = (e) =&gt; {
-        // Because we named the inputs to match their corresponding values in state, it's
-        // super easy to update the state
+        /*
+          Because we named the inputs to match their
+          corresponding values in state, it's
+          super easy to update the state
+        */
         this.setState({ [e.target.name]: e.target.value });
       }
 
@@ -107,9 +128,24 @@ to use [Axios](https://www.npmjs.com/package/axios) but there are any number of 
         const { fname, lname, email } = this.state;
         return (
           &lt;form onSubmit={this.onSubmit}&gt;
-            &lt;input type="text" name="fname" value={fname} onChange={this.onChange} /&gt;
-            &lt;input type="text" name="lname" value={lname} onChange={this.onChange} /&gt;
-            &lt;input type="text" name="email" value={email} onChange={this.onChange} /&gt;
+            &lt;input
+              type="text"
+              name="fname"
+              value={fname}
+              onChange={this.onChange}
+            /&gt;
+            &lt;input
+              type="text"
+              name="lname"
+              value={lname}
+              onChange={this.onChange}
+            /&gt;
+            &lt;input
+              type="text"
+              name="email"
+              value={email}
+              onChange={this.onChange}
+            /&gt;
             &lt;button type="submit"&gt;Submit&lt;/button&gt;
           &lt;/form&gt;
         );

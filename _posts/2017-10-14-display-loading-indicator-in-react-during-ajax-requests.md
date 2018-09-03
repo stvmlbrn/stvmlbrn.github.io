@@ -23,7 +23,8 @@ server.
     import { render } from 'react-dom';
     import Axios from 'axios';
 
-    import ResultsTable from './resultsTable'; // component that will display the data
+    // component that will display the data
+    import ResultsTable from './resultsTable';
 
     class LoadingDemo extends Component {
       constructor(props) {
@@ -90,9 +91,9 @@ lifecycle methods we'll us a stateless functional component.
 
 We're using some bootstrap classes `fa fa-spinner fa-spin` to create an animated spinning icon that, when rendered, will look something like this:
 
-<div class="well well-sm">
+<p>
   <i class="fa fa-spin fa-spinner"></i> Loading...
-</div>
+</p>
 
 Now let's begin to integrate this component into the parent component that we created earlier. There are a few things we'll do to be able to display the loading indicator to the user when an ajax request is running:
 
@@ -108,7 +109,8 @@ Let's put all this together:
     import { render } from 'react-dom';
     import Axios from 'axios';
 
-    import ResultsTable from './resultsTable'; // component that will display the data
+    // component that will display the data
+    import ResultsTable from './resultsTable';
     import LoadingSpinner from './loadingSpinner';
 
     class LoadingDemo extends Component {

@@ -13,7 +13,8 @@ For this example, imagine an application that allows users to filter car types b
 <pre class="prettyprint">
   <code class="lang-js">
     const search = (make, model, color) => {
-      const sql = 'select * from cars where make = ? and model = ? and color = ?';
+      const sql = `select * from cars
+        where make = ? and model = ? and color = ?`;
       connection.query(sql, [make, model, color], (error, results, fields) => {
           // handle results here...
         }

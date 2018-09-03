@@ -30,11 +30,12 @@ As I already mentioned, I generate pre-signed URLs at an enpoint hit by an ajax 
     const s3 = new aws.s3();
 
     router.get('/:key/downloadurl', (req, res, next) => {
-      Document.getDetails(req.params.id) // query the database for object details
+      // start by querying the database for object details
+      Document.getDetails(req.params.id)
         .then((result) => {
           const url = s3.getSignedUrl('getObject', {
             Bucket: bucketName, // the name of your bucket
-            Key: result[0].filename, // the name of the object in S3
+            Key: result[0].filename, // name of object in S3
             Expires: 20 // how long the URL is good, in seconds
           });
 

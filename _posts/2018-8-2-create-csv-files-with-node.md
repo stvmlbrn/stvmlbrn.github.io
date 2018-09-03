@@ -18,16 +18,28 @@ The method I use is to have 2 arrays, `row[]` and `output[]`. Each column of dat
     const path = require('path');
     const os = require('os');
 
-    const filename = path.join(__dirname, 'output.csv'); // output file in the same folder
+    // output file in the same folder
+    const filename = path.join(__dirname, 'output.csv');
     const output = []; // holds all rows of data
 
     // example JSON data
     const data = [
-      { state: 'Maryland', capital: 'Annapolis', population: 38394 },
-      { state: 'New York', capital: 'Albany', population: 97856 },
-      { state: 'New Mexico', capital: 'Santa Fe', population: 75764 },
+      {
+        state: 'Maryland',
+        capital: 'Annapolis',
+        population: 38394
+      },
+      {
+        state: 'New York',
+        capital: 'Albany',
+        population: 97856
+      },
+      {
+        state: 'New Mexico',
+        capital: 'Santa Fe',
+        population: 75764
+      },
     ];
-
 
     data.forEach((d) => {
       const row = []; // a new array for each row of data

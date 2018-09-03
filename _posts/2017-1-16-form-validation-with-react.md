@@ -46,8 +46,13 @@ Note: Make sure the Bootstrap CSS is available on your page by including it in y
 
         return (
           &lt;div className="container"&gt;
-            &lt;form className="form-signin" onSubmit={this.onSubmit}&gt;
-              &lt;h2 className="form-signin-heading"&gt;Create Account&lt;/h2&gt;
+            &lt;form
+              className="form-signin"
+              onSubmit={this.onSubmit}
+            &gt;
+              &lt;h2 className="form-signin-heading"&gt;
+                Create Account
+              &lt;/h2&gt;
 
               &lt;div className="form-group"&gt;
                 &lt;input
@@ -155,8 +160,8 @@ And here is the new render() method:
     render() {
       const { email, password, confirmPassword } = this.state;
       /*
-      Each of the group classes below will include the 'form-group' class, and will only
-      include the 'has-error' class if the isValid value is false.
+      Each of the group classes below will include the 'form-group' class, and will only 'has-error' class
+      if the isValid value is false.
       */
       const emailGroupClass = classNames('form-group', { 'has-error': !email.isValid });
       const passwordGroupClass = classNames('form-group', { 'has-error': !password.isValid });
@@ -249,7 +254,9 @@ Let's now add a simple form validation procedure so we can see it in action. We'
         isGood = false;
       }
 
-      // perform addtion validation on password and confirmPassword here...
+      /*
+        perform addtion validation on password and confirmPassword here...
+      */
 
       if (!isGood) {
         this.setState({
@@ -276,8 +283,10 @@ and <em>.message</em> values.
   <code class="language-javascript">
     onSubmit = (e) => {
       e.preventDefault();
-      this.resetValidationStates(); // reset states before the validation procedure is run.
-      if (this.formIsValid()) { // run the validation, and if it's good move on.
+      // reset states before the validation procedure is run.
+      this.resetValidationStates();
+      // run the validation, and if it's good move on.
+      if (this.formIsValid()) {
         // form processing here....
       }
     }
@@ -407,8 +416,8 @@ That's it! Putting everything together our completed SignUp component looks like
       render() {
         const { email, password, confirmPassword } = this.state;
         /*
-        Each of the group classes below will include the 'form-group' class, and will only
-        include the 'has-error' class if the isValid value is false.
+        Each of the group classes below will include the 'form-group' class, and will only include the 'has-error'
+        class if the isValid value is false.
         */
         const emailGroupClass = classNames('form-group', { 'has-error': !email.isValid });
         const passwordGroupClass = classNames('form-group', { 'has-error': !password.isValid });
