@@ -160,12 +160,18 @@ And here is the new render() method:
     render() {
       const { email, password, confirmPassword } = this.state;
       /*
-      Each of the group classes below will include the 'form-group' class, and will only 'has-error' class
-      if the isValid value is false.
+      Each of the group classes below will include the 'form-group' class,
+      and will only 'has-error' class if the isValid value is false.
       */
-      const emailGroupClass = classNames('form-group', { 'has-error': !email.isValid });
-      const passwordGroupClass = classNames('form-group', { 'has-error': !password.isValid });
-      const confirmGroupClass = classNames('form-group', { 'has-error': !confirmPassword.isValid });
+      const emailGroupClass = classNames('form-group',
+        { 'has-error': !email.isValid }
+      );
+      const passwordGroupClass = classNames('form-group',
+        { 'has-error': !password.isValid }
+      );
+      const confirmGroupClass = classNames('form-group',
+        { 'has-error': !confirmPassword.isValid }
+      );
 
       return (
         &lt;div className="container"&gt;
@@ -357,8 +363,10 @@ That's it! Putting everything together our completed SignUp component looks like
 
       onSubmit = (e) => {
         e.preventDefault();
-        this.resetValidationStates(); // reset states before the validation procedure is run.
-        if (this.formIsValid()) { // run the validation, and if it's good move on.
+        // reset states before the validation procedure is run.
+        this.resetValidationStates();
+        // run the validation, and if it's good move on.
+        if (this.formIsValid()) {
           // form processing here....
         }
       }
@@ -416,12 +424,18 @@ That's it! Putting everything together our completed SignUp component looks like
       render() {
         const { email, password, confirmPassword } = this.state;
         /*
-        Each of the group classes below will include the 'form-group' class, and will only include the 'has-error'
-        class if the isValid value is false.
+        Each of the group classes below will include the 'form-group' class,
+        and will only include the 'has-error' class if the isValid value is false.
         */
-        const emailGroupClass = classNames('form-group', { 'has-error': !email.isValid });
-        const passwordGroupClass = classNames('form-group', { 'has-error': !password.isValid });
-        const confirmGroupClass = classNames('form-group', { 'has-error': !confirmPassword.isValid });
+        const emailGroupClass = classNames('form-group',
+          { 'has-error': !email.isValid }
+        );
+        const passwordGroupClass = classNames('form-group',
+          { 'has-error': !password.isValid }
+        );
+        const confirmGroupClass = classNames('form-group',
+          { 'has-error': !confirmPassword.isValid }
+        );
 
         return (
           &lt;div className="container"&gt;
