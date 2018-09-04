@@ -89,7 +89,7 @@ lifecycle methods we'll us a stateless functional component.
   </code>
 </pre>
 
-We're using some bootstrap classes `fa fa-spinner fa-spin` to create an animated spinning icon that, when rendered, will look something like this:
+We're using some Font Awesome classes `fa fa-spinner fa-spin` to create an animated spinning icon that, when rendered, will look something like this:
 
 <p>
   <i class="fa fa-spin fa-spinner"></i> Loading...
