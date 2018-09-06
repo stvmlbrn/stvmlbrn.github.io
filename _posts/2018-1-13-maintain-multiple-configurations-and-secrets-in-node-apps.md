@@ -55,7 +55,7 @@ and then access the settings:
 
 <pre class="prettyprint">
   <code class="language-javascript">
-    config.get('Database.host'); // = dbserver.example.com
+    config.get('Database.host'); // dbserver_dev.example.com
   </code>
 </pre>
 
@@ -72,10 +72,6 @@ Pretty cool, right? The ability to keep these types of settings together is real
 </pre>
 
 Notice we don't have to add the entire configuration to the new file. Anything that may stay the same as the default configuration, such as the database name, username, and password in our example, do not need to be in the _production.json_ file. When the application is run in the production environment, `config.get('Database.host')` will be pulled from the _production.json_ file and revert to the _default.json_ configuration for everything else. To support any other runtime environment that requires different configuration we just need to create a new file  - _staging.json, qa.json,_ etc. and add in the new configuration settings.
-
-<div class="well well-sm">
-NOTE: In case your not sure how to set your runtime environment, on linux you would run 'export NODE_ENV=production' prior to starting your application to set your environment to production. On Windows, run 'set NODE_ENV=production'.
-</div>
 
 But we have a glaring problem which you may have already noticed. Our database password is in the configuration. We generally want to keep that out of the codebase and repository for security reasons, so we don't want to include it in `config`. For that we'll use `dotenv-safe`.
 
@@ -99,7 +95,7 @@ Then, as early as possible in our project code we need load these environment va
 
 <pre class="prettyprint">
   <code class="language-javascript">
-    require('dotenv-safe').load(); // only needs done once in the project
+    require('dotenv-safe').config(); 
   </code>
 </pre>
 
@@ -143,9 +139,7 @@ With this current setup we can access any runtime environment setting using `con
 
 Now, when we call `config.get('Database.password')`, `config` will look for an environment variable called "DB_PASSWORD". If it's not found it will use the value found in the _.json_ file that matches our current runtime environment, and if it's not found there it will load from _default.json_.
 
-<div class="well well-sm">
-NOTE: Since we are now keeping the DB_PASSWORD value in .env file, be sure to remove it from the original default.json file we defined at the beginning of this tutorial.
-</div>
+<strong>NOTE:</strong> Since we are now keeping the DB_PASSWORD value in .env file, be sure to remove it from the original default.json file we defined at the beginning of this tutorial.
 
 So there you have it - `config` and `dotenv-safe` make for a nice setup to manage runtime environment configurations and environment variables!
 
