@@ -4,14 +4,11 @@ title: How To Send HTML Email in Node.js
 comments: true
 tags: [node.js]
 icon: node.png
-excerpt: If you reading this to learn how to send the beautiful HTML email you just finished designing, you've already done the hard part. While designing HTML email is a pain, sending HTML email may required an additional step or two than what you're used to but it's still super easy.
 ---
-
-[<i class="fa fa-github"></i> Get the code](https://github.com/stvmlbrn/node-html-email-demo)
 
 If you reading this to learn how to send the beautiful HTML email you just finished designing, you've already done the hard part. While designing HTML email is a pain, sending HTML email may required an additional step or two than what you're used to but it's still super easy.
 
-To be clear, this tutorial does _not_ cover creating the HTML email template. You can find plenty of free templates online to use (and explanations why styling HTML email is difficult) and the github repo for this tutorial includes an example template. This tutorial is focused on the steps required to turn the HTML email template into content that can be rendered by email clients and sending it.
+To be clear, this tutorial does _not_ cover creating the HTML email template. You can find plenty of free templates online to use (and explanations why styling HTML email is difficult) and the [github repo](https://github.com/stvmlbrn/node-html-email-demo) for this tutorial includes an example template. This tutorial is focused on the steps required to turn the HTML email template into content that can be rendered by email clients and sending it.
 
 
 
@@ -72,7 +69,7 @@ Now we are ready to get into the nitty-gritty. This next step requires a little 
   </code>
 </pre>
 
-The 3 file that can be included under each template folder are pretty self explanatory (the content of these files used in this demo can be found in the github repo):
+The 3 file that can be included under each template folder are pretty self explanatory (the content of these files used in this demo can be found in the [github repo](https://github.com/stvmlbrn/node-html-email-demo)):
 
 * html.pug - The HTML markup to be used as the content of the message.
 * subject.pug - The subject of the email.
@@ -162,5 +159,7 @@ Putting all the code together looks like this:
 </pre>
 
 This tutorial just scratches the surface of what can be done with these packages. There are a myriad of ways you can define the email properties, send attachments, reference external CSS files, localization, and so on. What we've done in this tutorial is enough to get started. I encourage you to continue to look at the documentation for both packages to utilize them to their full potential.
+
+[<i class="fa fa-github"></i> Get the code](https://github.com/stvmlbrn/node-html-email-demo)
 
 Cheers!
