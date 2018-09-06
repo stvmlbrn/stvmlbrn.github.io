@@ -13,14 +13,11 @@ The image below shows gzip section in the default `nginx.conf` file. As you can 
 
 To enable gzip compression for MIME-types other than `text/html` this line should be uncommented and include a list of MIME-types that you want Nginx to compress (or override this setting per-application rather than in the global config). There are already a few types listed, but a more complete list [can be found here](https://github.com/h5bp/server-configs-nginx/blob/master/nginx.conf#L67-L109) to give you some additional possibilities.
 
-<!--
-<div class="well well-sm">
-  <strong>
-    <i class="fa fa-exclamation-triangle text-danger"></i>
-  </strong>
-  If you are using TLS/SSL, be sure you understand the Breach exploit before enabling HTTP compression on your site/server to make sure gzip is safe for your application. <a href="http://www.breachattack.com/">http://www.breachattack.com/</a>
-</div>
--->
+<strong>
+  <i class="fa fa-exclamation-triangle text-danger"></i>
+</strong>
+If you are using TLS/SSL, be sure you understand the Breach exploit before enabling HTTP compression on your site/server to make sure gzip is safe for your application. <a href="http://www.breachattack.com/">http://www.breachattack.com/</a>
+
 Cheers!
 
 
