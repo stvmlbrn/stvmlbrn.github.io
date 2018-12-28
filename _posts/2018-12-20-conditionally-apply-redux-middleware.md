@@ -2,7 +2,7 @@
 layout: post
 title: Conditionally Apply Redux Middleware
 comments: true
-tags: [react.js, redux]
+tags: [react, redux]
 icon: react.png
 ---
 
