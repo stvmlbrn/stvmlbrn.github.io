@@ -32,7 +32,11 @@ Here is an example:
       middlewares.push(logger);
     }
 
-    const store = createStore(reducer, initialState, applyMiddlware(...middlewares));
+    const store = createStore(
+      reducer,
+      initialState,
+      applyMiddlware(...middlewares)
+    );
   </code>
 </pre>
 
