@@ -12,7 +12,7 @@ There are a number of pre-existing packages that can be used to generate CSV fil
 
 The method I use is to have 2 arrays, `row[]` and `output[]`. Each column of data in a particular row will be pushed to `row[]`. After all data for the current row has been added it's joined with a comma and pushed to `output[]` array. The process is repeated until all rows have been added to `output[]`. Then join `output[]` with an end-of-line character to split it into multiple lines, and write it to the CSV file.
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     const fs = require('fs');
     const path = require('path');
@@ -58,7 +58,7 @@ So this is obviously a bit of a contrived example, and I've spared you from the 
 
 Also worth mentioning here is the possibility of having comma characters inside your data values, which throws off the columns in the resulting csv file. As such, it's normally good practice to wrap your data values inside quotes. This is sometimes referred to as a <em>comma-quoted</em> csv file. To implement this, our .forEach() loop would look like this:
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     data.forEach((d) => {
       const row = []; // a new array for each row of data

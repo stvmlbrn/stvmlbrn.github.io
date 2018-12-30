@@ -10,7 +10,7 @@ So you have decided to use JSON Web Tokens (JWT) to secure your API, or you are 
 
 The first thing we need to do is get a token from the API. To do so we can leverage Jest's `beforeAll()` function to get a token before any tests are run, and we'll use `supertest` to make a call to our authentication endpoint. For the sake of this example we'll be using `/login` for the endpoint and passing a username and password payload. Your actual authentication process may be different, so be sure to adjust what you see here accordingly. Once we receive a token back from the authentication endpoint we can store it in a variable that all tests will have access to.
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     const request = require('supertest');
     const app = require('../app'); // the express server
@@ -40,7 +40,7 @@ Depending on how your authentication is configured you may want to give some tho
 
 So now that we are authenticated and have a token it's just a matter of passing that token to any API we want to test, or we can test that a particular route requires authentication by *not* passing the token. Here is a quick example:
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     const request = require('supertest');
     const app = require('../app'); // the express server

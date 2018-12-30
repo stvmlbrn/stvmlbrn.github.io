@@ -20,7 +20,7 @@ So let's get started. Here are 2 packages we can use together to send HTML email
 #### Define A Transport Method
 The transport configuration defines how we are going to connect to a server or service to send the email. The configuration object passed to the _createTransport()_ method is going to vary based on what you're using to send email. Maybe you have a local mail server like Microsoft Exchange, or maybe you're using a service such as Amazon SES or Mailgun. Whatever it is that handles the actual sending of your email is going to dictate what your configuration object looks like. For development purposes I really like to use [Mailtrap.io](https://mailtrap.io) so that's what I'll be using for this example. I can't recommend Mailtrap enough.
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     const nodemailer = require('nodemailer');
     const transporter = nodemailer.createTransport({
@@ -44,7 +44,7 @@ We can use tools like `email-templates` to allow us to still use a more modern d
 
 We'll start by pulling in the `email-templates` package and creating a new email object. As part of the email object, we'll assign the transport property to the transport we defined in the previous step. By default, `email-templates` will only actually send email in production environments, though it does provide a preview option that opens a new browser tab to allow you to see the email message. However, since we are using Mailtrap we can go ahead an allow sending and disable the preview since it's not needed.
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     const Email = require('email-templates');
 
@@ -58,8 +58,8 @@ We'll start by pulling in the `email-templates` package and creating a new email
 
 Now we are ready to get into the nitty-gritty. This next step requires a little bit more explanation. By default, `email-templates` will look for a certain directory structure to find what template to use for the message. Basically, it looks for an _emails_ folder off the root of the project with sub-folders that match the name of each template. In this example, the name of the template we'll be using is 'hello'.
 
-<pre class="prettyprint">
-  <code class="language-bsh">
+<pre>
+  <code class="language-bash">
     |- app.js
     |- emails
       |- hello
@@ -77,7 +77,7 @@ The 3 file that can be included under each template folder are pretty self expla
 
 As you probably already noticed, `email-templates` uses the Pug template engine. If you prefer to use something else like EJS, you can. And if you want to keep your templates in another location, you can do that as well. Both of these settings can be defined by modifying the email object we created in the previous step (though we'll be sticking with the defaults for the rest of this tutorial):
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     const Email = require('email-templates');
 
@@ -97,7 +97,7 @@ As you probably already noticed, `email-templates` uses the Pug template engine.
 
 We are finally ready to send the email. As part of the _send()_ method we need to indicate the name of the template, some message properties such the sender and recipient information, and any local variables we want to inject into the email content or subject.
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     email.send({
       template: 'hello',
@@ -123,7 +123,7 @@ and the text-only content looks like this:
 
 Putting all the code together looks like this:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     const nodemailer = require('nodemailer');
     const Email = require('email-templates');

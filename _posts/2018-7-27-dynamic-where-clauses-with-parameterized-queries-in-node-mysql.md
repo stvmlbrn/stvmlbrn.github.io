@@ -10,7 +10,7 @@ Occassionally when writing SQL queries the number of fields that we need to filt
 
 For this example, imagine an application that allows users to filter car types based on certain criteria such as make, model, and color. Our search function may look something like this:
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     const search = (make, model, color) => {
       const sql = `select * from cars
@@ -31,7 +31,7 @@ In order to accommodate this in the search API, we'll need to do 2 things - (1) 
 
 One trick I like to use in these types of situations is to start the SQL statement with a 'where' clause that will match all records. The reason for this is simple - when it's determined that we need to append a 'where' clause because the user make a specific selection, we do not have to detect whether or not a 'where' clause already exists, which makes building the SQL string much easier. For example:
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     const sql = 'select * from cars where 1 = 1';
   </code>
@@ -39,7 +39,7 @@ One trick I like to use in these types of situations is to start the SQL stateme
 
 That may seem a little weird at first, but it's handy. Since `1 = 1` will alway be true, no records are acually excluded from the database. This statement is functionally the same as
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     const sql = 'select * from cars';
   </code>
@@ -49,7 +49,7 @@ But now when we need to add a filter based on 'color', for example, we do not ha
 
 Let put it all together:
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     const search = (make, model, color) => {
       const params = [];

@@ -22,7 +22,7 @@ I found 2 useful packages to help in the process:
 
 Here is the entire script:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     var extract = require('pdf-text-extract');
     var hummus = require('hummus');

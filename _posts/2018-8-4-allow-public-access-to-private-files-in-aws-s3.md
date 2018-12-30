@@ -12,7 +12,7 @@ A pre-signed URL is created using the security credentials of the object owner a
 
 Amazon provides SDKs for the most popular programming languages. In this example I'll be using the JavaScript SDK in Node.js, so make sure the `aws-sdk` is installed:
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-bash">
     npm i aws-sdk
   </code>
@@ -20,7 +20,7 @@ Amazon provides SDKs for the most popular programming languages. In this example
 
 As I already mentioned, I generate pre-signed URLs at an enpoint hit by an ajax request, so my code is typically found inside an `express` route. The client sends the ID (as stored in a database) of the object record as part of the request. In order to generate the pre-signed URL we need the name of the object, which I also have stored in the db. So the first step for me generally is to query the database for the name of the file using the ID passed in the request URL. Your method may vary.
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     const aws = require('aws-sdk');
     aws.config.update({

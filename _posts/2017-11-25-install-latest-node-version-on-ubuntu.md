@@ -10,7 +10,7 @@ Here is a quick and easy way to install the latest version of Node.js on an Ubun
 
 First, make sure you have `npm` installed:
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-bsh">
     $ sudo apt-get update
     $ sudo apt-get install npm
@@ -19,7 +19,7 @@ First, make sure you have `npm` installed:
 
 Then it is just a simple matter of globally installing `n`:
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-bsh">
     $ sudo npm i n -g
   </code>
@@ -27,7 +27,7 @@ Then it is just a simple matter of globally installing `n`:
 
 Once `n` is installed you can install the latest version of Node.js with the following command:
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-bsh">
     $ sudo n latest
   </code>
@@ -35,7 +35,7 @@ Once `n` is installed you can install the latest version of Node.js with the fol
 
 Or, if you prefer the stable version use this:
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-bsh">
     $ sudo n stable
   </code>

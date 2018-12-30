@@ -17,7 +17,7 @@ To get started, lets mock up a simple React component that fetches some data
 when the user presses a button and displays that data after it's received from the
 server.
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     import React, { Component } from 'react';
     import { render } from 'react-dom';
@@ -75,7 +75,7 @@ Now that we have all that setup, let's create our `LoadingSpinner` component. We
 so we can reuse it elsewhere in our app, and because it doesn't need any internal state or react
 lifecycle methods we'll us a stateless functional component.
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     import React from 'react';
 
@@ -103,7 +103,7 @@ Now let's begin to integrate this component into the parent component that we cr
 
 Let's put all this together:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     import React, { Component } from 'react';
     import { render } from 'react-dom';

@@ -10,7 +10,7 @@ There may be situations when you only want to apply certain redux middlewares. F
 
 Here is an example:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     import { createStore, applyMiddleware } from 'redux';
     import { logger } from 'redux-logger';

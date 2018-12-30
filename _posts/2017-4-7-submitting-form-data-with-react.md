@@ -20,7 +20,7 @@ development the task you should be thinking about is "how do I put the value of 
 my state". To do so, use the `onChange()` event handler on the input fields. Here
 is a simple example:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     import React, { Component } from 'react';
 
@@ -89,7 +89,7 @@ what your probably used to doing.
 Working from our example above, let's create an `onSubmit()` function and attach that to the form. I like
 to use [Axios](https://www.npmjs.com/package/axios) but there are any number of tools that are suitable for this, such as Fetch and SuperAgent.
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     import React, { Component } from 'react';
     import axios from 'axios';

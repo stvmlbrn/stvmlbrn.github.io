@@ -12,7 +12,7 @@ Handling file uploads in a React/Node/Express application is done a little diffe
 <h2 class="heading">The Server</h2>
 Let's start by looking at the server. The code below should look familiar as a simple Express server that handles a single POST operation using the popular body parsing middleware `body-parser`.
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     const port = process.env.PORT || 3000;
     const express = require('express');
@@ -43,7 +43,7 @@ There are 2 options available in `multer` to determine how we want to save the f
 
 First, let's make sure we have `multer` installed. Also, it's a good practice to rename files after upload for security purposes. A random-generated ID works well for this, so let's install the `uuid` package too:
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-bsh">
     $ npm i multer uuid
   </code>
@@ -51,7 +51,7 @@ First, let's make sure we have `multer` installed. Also, it's a good practice to
 
 Now add these new modules to the Express configuration, along with `path` which will be used for some file manipulation tasks.
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     const multer = require('multer');
     const uuidv4 = require('uuid/v4');
@@ -61,7 +61,7 @@ Now add these new modules to the Express configuration, along with `path` which 
 
 Since we are using disk storage we need to define how we want that to work by specifying the _destination()_ and _filename()_ functions in the _multer.diskStorage_ configuration. Both of these functions take the request object, file object, and a callback function as arguments. By default, `multer` does not supply a file extension when saving the file, so we need to make sure we do that ourselves in the _filename()_ function we define.
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     // configure storage
     const storage = multer.diskStorage({
@@ -92,7 +92,7 @@ Since we are using disk storage we need to define how we want that to work by sp
 
 The final step is to actually process the uploaded file. We need to modify the POST route to include the `multer` middleware instance we created in the previous step.
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     app.post('/', upload.single('selectedFile'), (req, res) => {
       /*
@@ -110,7 +110,7 @@ The 'selectedFile' argument passed to the _upload.single()_ function should matc
 
 Putting it all together, the completed server code looks like this:
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     const port = process.env.PORT || 3000;
     const express = require('express');
@@ -171,7 +171,7 @@ If you are not familiar with how to process and submit form data in React you sh
 
 Before we get into handling input changes and submission, here is the basic React component we'll be working with:
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     import React, { Component } from 'react';
     import axios from 'axios';
@@ -219,7 +219,7 @@ Before we get into handling input changes and submission, here is the basic Reac
 
 So with that in place, let's get to work on the _onChange()_ handler. Values in file fields have some different properties than other form inputs such as text, select, checkbox, etc. For that reason, we can't just assign the value of the file field to the state variable like we do with other inputs (again, if this doesn't make sense please look at my other post). So we need to check if the input being changed is the file input or something else and act accordingly.
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     onChange = (e) => {
       switch (e.target.name) {
@@ -235,7 +235,7 @@ So with that in place, let's get to work on the _onChange()_ handler. Values in 
 
 Finally, let's finish up with the _onSubmit()_ function. As we talked about in the server section the request needs to be sent as _multipart/form-data_, for that we can create a new _FormData()_ object and append our field values.
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     onSubmit = (e) => {
       e.preventDefault();
@@ -255,7 +255,7 @@ Finally, let's finish up with the _onSubmit()_ function. As we talked about in t
 
 Putting it all together, the complete client-side code now looks like this:
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     import React, { Component } from 'react';
     import axios from 'axios';

@@ -20,7 +20,7 @@ So let's take a look at an example sign-up form that asks for an email address, 
 Note: Make sure the Bootstrap CSS is available on your page by including it in your bundle, loading from CDN, or some other method.
 </div>
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     import React, { Component } from 'react';
 
@@ -111,7 +111,7 @@ Which ends up looking something like this in the browser:
 
 Pretty basic stuff so far. To begin the validation we need a place to hold an input's validation state and the message we want to display to the user. To me, it makes sense to keep this in the component's state with the input value. In order to help facilitate resetting the form back to it's original state, it's helpful to keep the initial form data in a separate variable, and then load that variable into the state.
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     formDefaults = {
       email: { value: '', isValid: true, message: '' },
@@ -129,7 +129,7 @@ So now for each input we have a place to store its value, its validation state (
 
 To dynamically assign classes, the `classnames` ([https://www.npmjs.com/package/classnames](https://www.npmjs.com/package/classnames)) package works perfectly.
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     import classNames from 'classnames';
   </code>
@@ -137,7 +137,7 @@ To dynamically assign classes, the `classnames` ([https://www.npmjs.com/package/
 
 Update the onChange() method:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     onChange = (e) => {
       const state = {
@@ -155,7 +155,7 @@ Update the onChange() method:
 
 And here is the new render() method:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     render() {
       const { email, password, confirmPassword } = this.state;
@@ -233,13 +233,13 @@ Perfect. At this point, anytime we write something to any of the <em>.message</e
 Let's now add a simple form validation procedure so we can see it in action. We'll use the
 [validator](https://www.npmjs.com/package/validator) module to help us out.
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     import validator from 'validator';
   </code>
 </pre>
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     onSubmit = (e) => {
       e.preventDefault();
@@ -285,7 +285,7 @@ the validation will fail and the form will reflect that to the user:
 Now, suppose a user fails one of our validation tests, but fixes it, submits again, and fails a validation test on a different input. We need to be able to clear any messages or has-error classes on any of the other inputs so they don't stick around after the user fixes their mistake. The easiest way to do this is to use a quick function that is called before our validation procedure runs that will reset all <em>.isValid</em>
 and <em>.message</em> values.
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     onSubmit = (e) => {
       e.preventDefault();
@@ -322,7 +322,7 @@ and <em>.message</em> values.
 
 Finally, we may want to add a 'Reset Form' button to the form. This will reset the form back to it's initial state. Since we kept the initial form data in a separate class variable, we can use that to overwrite the existing form values currently in state. Keep in mind, if you have state data other than your form inputs you'll need to be more careful about overwriting your entire state like we are doing here.
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     resetForm = () => {
       this.setState(...this.formDefaults);
@@ -332,7 +332,7 @@ Finally, we may want to add a 'Reset Form' button to the form. This will reset t
 
 That's it! Putting everything together our completed SignUp component looks like this:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     import React, { Component } from 'react';
     import classNames from 'classnames';

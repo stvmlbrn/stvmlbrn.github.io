@@ -14,23 +14,23 @@ It worth it to invest some time reaching a good solution for managing environmen
 
 Let's begin by installing both packages packages:
 
-<pre class="prettyprint">
-  <code class="language-bsh">
+<pre>
+  <code class="language-bash">
     $ npm i config dotenv-safe
   </code>
 </pre>
 
 By default, `config` will look for a _config_ folder at the root of your project for the configuration files, so let's go ahead and create the folder with a default configuration file:
 
-<pre class="prettyprint">
-  <code class="language-bsh">
+<pre>
+  <code class="language-bash">
     $ mkdir config && touch ./config/default.json
   </code>
 </pre>
 
 As you can tell by the name of the file we just created, `config` settings will be saved as a JSON object. Our _default.json_ file that contains settings for a database connection may look something like this:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     {
       "Database": {
@@ -45,15 +45,15 @@ As you can tell by the name of the file we just created, `config` settings will 
 
 Now, anywhere in the project where we need access to this information, we can required the `config` package:
 
-<pre class="prettyprint">
-  <code class="lanaguage-javascript">
+<pre>
+  <code class="language-javascript">
     const config = require('config');
   </code>
 </pre>
 
 and then access the settings:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     config.get('Database.host'); // dbserver_dev.example.com
   </code>
@@ -61,7 +61,7 @@ and then access the settings:
 
 Pretty cool, right? The ability to keep these types of settings together is really handy. But the whole point of `config` is to help us manage these configurations across multiple runtime environments. To do this, we need to create a new configuration file for each environment. For example, to add our configuration for the _production_ environment we need to create a _production.json_ in the _config_ folder. The _production.json_ file may look something like this:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     {
       "Database": {
@@ -77,31 +77,31 @@ But we have a glaring problem which you may have already noticed. Our database p
 
 The `dotenv-safe` package allows us to define any environment variables we want to keep private. It's worth noting that we are now talking about the environment used by the Node process, not the runtime environment such as development, production, staging, etc. that we refer to when discussing configuration settings with `config`. By default `dotenv-safe` will pull values from a _.env_ file located at the root of the project:
 
-<pre class="prettyprint">
-  <code class="language-bsh">
+<pre>
+  <code class="language-bash">
     $ touch .env
   </code>
 </pre>
 
 In our example, we want to keep our database password out of the codebase, so the _.env_ file will look something like this:
 
-<pre class="prettyprint">
-  <code class="language-bsh">
+<pre>
+  <code class="language-bash">
     DB_PASSWORD=secret_password
   </code>
 </pre>
 
 Then, as early as possible in our project code we need load these environment variables:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
-    require('dotenv-safe').config(); 
+    require('dotenv-safe').config();
   </code>
 </pre>
 
 Now any variable we define in the _.env_ file will be available in our code as _process.env.VARIABLE_NAME_.
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     db_password = process.env.DB_PASSWORD // = secret_password
   </code>
@@ -111,14 +111,14 @@ Since we want to keep the information in this file private and out of the code r
 
 The nice thing about `dotenv-safe` over the package it's built upon, `dotenv`, is that we can define an example file without values that should to be added to the repository so it's easy to keep track of what environment variables are expected without having to go through the code.
 
-<pre class="prettyprint">
-  <code class="language-bsh">
+<pre>
+  <code class="language-bash">
     $ touch .env.example
   </code>
 </pre>
 
-<pre class="prettyprint">
-  <code class="language-bsh">
+<pre>
+  <code class="language-bash">
     DB_PASSWORD=
   </code>
 </pre>
@@ -127,7 +127,7 @@ Not only can developers use this file to be aware of any environment variables t
 
 With this current setup we can access any runtime environment setting using `config.get('whatever.setting')` and any private environment variable via `process.env.VARIABLE_NAME`. This works, but we can go a step farther so the only methods we need to use in our code are those offered by the `config` package, as well as take advantage of the hierarchical nature of `config`. We do this by telling `config` what environment variables to expect, and these values will override anything we have defined in the _.json_ configuration files. To do this, we make a new file in the _config_ folder called _custom-environment-variables.json_ which may look something like this:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     {
       "Database": {

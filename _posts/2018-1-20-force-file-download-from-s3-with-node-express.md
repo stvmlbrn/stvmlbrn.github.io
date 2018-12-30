@@ -12,7 +12,7 @@ Express already offers the _response.download()_ method that can take care of th
 
 To force the browser to download the file we need to set  _Content-Disposition_ header in the response to _attachment_ (a default name for the file can also be specified). Then to actually serve the file to the client, we can use the `reqeust` package to make the request to the remote URL and pipe it to the response object.
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     const request = require('request');
 

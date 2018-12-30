@@ -10,7 +10,7 @@ I was recently working on a demo project and found myself constantly creating an
 
 Fortunately, it's quite easy to do. We need to add our dynamic catch-all route handler *after* all other routes in our application have been defined, such as API endpoints and views that require specific data injected into them, but *before* our 404 handler. Let's look at an example:
 
-<pre class="prettyprint">
+<pre>
   <code class="lang-js">
     var express = require('express');
     var app = express();

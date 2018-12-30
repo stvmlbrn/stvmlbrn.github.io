@@ -10,7 +10,7 @@ During the development process there may be times when you need to allow public 
 
 For example, let's say you are developing a application that is running on port 3000. With ngrok installed we can run the `ngrok` command and specify the port we want to map:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-bash">
     $ ngrok http 3000
   </code>
@@ -26,7 +26,7 @@ As you can see in the above image, ngrok maps http and https URLs to localhost. 
 
 ngrok works regardless of your technology stack. It simply acts as a tunnel from the public internet to your private server. However, with the `ngrok` package on NPM [(https://www.npmjs.com/package/ngrok)](https://www.npmjs.com/package/ngrok) it happens to work extremely well with Node.js. Let's take a look at a basic Express server:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     const express = require('express');
     const app = express();
@@ -40,7 +40,7 @@ ngrok works regardless of your technology stack. It simply acts as a tunnel from
 
 This is a pretty simple express setup. Assuming this file is saved as `index.js`, we can start it with
 
-<pre class="prettyprint">
+<pre>
   <code class="language-bash">
     $ node index.js
   </code>
@@ -52,7 +52,7 @@ This is a pretty simple express setup. Assuming this file is saved as `index.js`
 
 To integrate ngrok we first need to install it from NPM:
 
-<pre class="prettyprint">
+<pre>
   <code class="language-bash">
     $ npm i ngrok
   </code>
@@ -60,7 +60,7 @@ To integrate ngrok we first need to install it from NPM:
 
 Now let's modify our express server to conditionally open an ngrok tunnel. We could use something like a command-line argument to the node process to indicate whether to open a tunnel or not, but I like to use an environment variable for this. We'll tell our program that if `process.env.ENABLE_TUNNEL` is true to load `ngrok` and start the server with a tunnel.
 
-<pre class="prettyprint">
+<pre>
   <code class="language-javascript">
     const express = require('express');
     const app = express();
