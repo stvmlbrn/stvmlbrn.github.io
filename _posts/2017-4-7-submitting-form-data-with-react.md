@@ -84,7 +84,7 @@ other libraries like jQuery to gather and submit form data. However, as applicat
 
 After gaining an understanding of how and why we keep our form data in state. I think it will
 make perfect sense how we want to handle the form submission. In reality, it's not that much different than
-what your probably used to doing.
+what you're probably used to doing.
 
 Working from our example above, let's create an `onSubmit()` function and attach that to the form. I like
 to use [Axios](https://www.npmjs.com/package/axios) but there are any number of tools that are suitable for this, such as Fetch and SuperAgent.
