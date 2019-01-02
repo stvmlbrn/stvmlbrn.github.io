@@ -36,7 +36,7 @@ server.
 
       onClick = () => {
         Axios.get('/endpoint')
-          .then(result => this.setState({ data: result.data }));
+          .then(result => this.setState({ data: [...result.data] }));
       }
 
       render() {
@@ -97,9 +97,9 @@ We're using some Font Awesome classes `fa fa-spinner fa-spin` to create an anima
 
 Now let's begin to integrate this component into the parent component that we created earlier. There are a few things we'll do to be able to display the loading indicator to the user when an ajax request is running:
 
-  * import the LoadingSpinner component
-  * maintain a state-level variable to indicate when an ajax request is running
-  * conditionally render the LoadingSpinner component based on the value of the variable in the previous step
+- import the LoadingSpinner component
+- maintain a state-level variable to indicate when an ajax request is running
+- conditionally render the LoadingSpinner component based on the value of the variable in the previous step
 
 Let's put all this together:
 
@@ -132,7 +132,7 @@ Let's put all this together:
           Axios.get('/endpoint')
             .then(result => this.setState({
               loading: false,
-              data: result.data,
+              data: [...result.data],
             }));
         });
       }
