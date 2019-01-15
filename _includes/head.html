@@ -1,57 +1,66 @@
 <title>{{ page.title }}</title>
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8" /> <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+<meta
+  name="description"
+  content="{% if page.excerpt %}{{
+    page.excerpt | strip_html | strip_newlines | truncate: 160
+  }}{% else %}{{ site.description }}{% endif %}"
+/>
 
-<meta property="og:site_name" content="{{ site.title }}">
-{% if page.title %}
-  <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:type" content="article">
-  <meta property="og:description" content="{{ page.excerpt | strip_html }}"/>
-{% else %}
-  <meta property="og:title" content="{{ site.title }}">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="{{ site.description }}">
+<meta property="og:site_name" content="{{ site.title }}" /> {% if page.title %}
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="{{ page.excerpt | strip_html }}" /> {% else %}
+<meta property="og:title" content="{{ site.title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="{{ site.description }}" /> {% endif %} {% if page.date %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+<meta property="article:author" content="{{ site.url }}/about/" /> {% endif %}
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" /> {% if page.tags %}
+<meta itemprop="keywords" content="{{ page.tags | join: ',' }}" /> {% for tag in page.tags %}
+<meta property="article:tag" content="{{ tag }}" /> {% endfor %} {% endif %} {% if author %}
+<meta property="article:author" content="{{ author.name }}" /> {% endif %} {% if jekyll.environment
+== 'production' %}
+<script>
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    (i[r] =
+      i[r] ||
+      function() {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date());
+    (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-940579-13', 'auto');
+  ga('send', 'pageview');
+</script>
+<script
+  type="text/javascript"
+  src="//platform-api.sharethis.com/js/sharethis.js#property=5a550a87a7cf550012bff37d&product=sticky-share-buttons"
+  async="async"
+></script>
 {% endif %}
-{% if page.date %}
-  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-  <meta property="article:author" content="{{ site.url }}/about/">
-{% endif %}
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-{% if page.tags %}
-  <meta itemprop="keywords" content="{{ page.tags | join: ',' }}" />
-{% for tag in page.tags %}
-  <meta property="article:tag" content="{{ tag }}">
-{% endfor %}
-{% endif %}
-{% if author %}
-  <meta property="article:author" content="{{ author.name }}" />
-{% endif %}
 
-{% if jekyll.environment == 'production' %}
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<link rel="shortcut icon" href="favicon.ico" />
 
-    ga('create', 'UA-940579-13', 'auto');
-    ga('send', 'pageview');
-
-  </script>
-  <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a550a87a7cf550012bff37d&product=sticky-share-buttons' async='async'></script>
-{% endif %}
-
-<link rel="shortcut icon" href="favicon.ico">
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
-<link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/responsive.css">
-<link rel="stylesheet" href="/css/prism.css">
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/responsive.css" />
+<link rel="stylesheet" href="/css/prism.css" />
+<link
+  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+  crossorigin="anonymous"
+/>
 
 <script type="text/javascript" src="/assets/js/prism.js"></script>
 <!--
@@ -70,108 +79,106 @@
 <script src="/assets/js/jquery.custom.js"></script>
 -->
 
-
-
-
-
-
-
-
 <style type="text/css" media="all">
-	body,
-	input,
-	input[type="text"],
-	input[type="email"],
-	input[type="url"],
-	input[type="search"],
-	input[type="password"],
-	textarea,
-	table,
-	.sidebar .widget_ad .widget-title,
-	.site-footer .widget_ad .widget-title {
-		font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	}
-	#secondary-menu li a,
-	.footer-nav li a,
-	.pagination .page-numbers,
-	button,
-	.btn,
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	.comment-form label,
-	label,
-	h1,h2,h3,h4,h5,h6 {
-		font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	}
-	a:hover,
-	.site-header .search-icon:hover span,
-	.sf-menu li a:hover,
-	.sf-menu li li a:hover,
-	.sf-menu li.sfHover a,
-	.sf-menu li.current-menu-item a,
-	.sf-menu li.current-menu-item a:hover,
-	.breadcrumbs .breadcrumbs-nav a:hover,
-	.read-more a,
-	.read-more a:visited,
-	.entry-title a:hover,
-	article.hentry .edit-link a,
-	.author-box a,
-	.page-content a,
-	.entry-content a,
-	.comment-author a,
-	.comment-content a,
-	.comment-reply-title small a:hover,
-	.sidebar .widget a,
-	.sidebar .widget ul li a:hover {
-		color: #2baae1;
-	}
-	button,
-	.btn,
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	.entry-category a,
-	.pagination .prev:hover,
-	.pagination .next:hover,
-	#back-top a span {
-		background-color: #2baae1;
-	}
-	.read-more a:hover,
-	.author-box a:hover,
-	.page-content a:hover,
-	.entry-content a:hover,
-	.widget_tag_cloud .tagcloud a:hover:before,
-	.entry-tags .tag-links a:hover:before,
-	.content-loop .entry-title a:hover,
-	.content-list .entry-title a:hover,
-	.content-grid .entry-title a:hover,
-	article.hentry .edit-link a:hover,
-	.site-footer .widget ul li a:hover,
-	.comment-content a:hover {
-		color: #ff6644;
-	}
-	#back-top a:hover span,
-	.bx-wrapper .bx-pager.bx-default-pager a:hover,
-	.bx-wrapper .bx-pager.bx-default-pager a.active,
-	.bx-wrapper .bx-pager.bx-default-pager a:focus,
-	.pagination .page-numbers:hover,
-	.pagination .page-numbers.current,
-	.sidebar .widget ul li:before,
-	.widget_newsletter input[type="submit"],
-	.widget_newsletter input[type="button"],
-	.widget_newsletter button {
-		background-color: #ff6644;
-	}
-	.slicknav_nav,
-	.header-search,
-	.sf-menu li a:before {
-		border-color: #ff6644;
-	}
+  body,
+  input,
+  input[type='text'],
+  input[type='email'],
+  input[type='url'],
+  input[type='search'],
+  input[type='password'],
+  textarea,
+  table,
+  .sidebar .widget_ad .widget-title,
+  .site-footer .widget_ad .widget-title {
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  #secondary-menu li a,
+  .footer-nav li a,
+  .pagination .page-numbers,
+  button,
+  .btn,
+  input[type='submit'],
+  input[type='reset'],
+  input[type='button'],
+  .comment-form label,
+  label,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  a:hover,
+  .site-header .search-icon:hover span,
+  .sf-menu li a:hover,
+  .sf-menu li li a:hover,
+  .sf-menu li.sfHover a,
+  .sf-menu li.current-menu-item a,
+  .sf-menu li.current-menu-item a:hover,
+  .breadcrumbs .breadcrumbs-nav a:hover,
+  .read-more a,
+  .read-more a:visited,
+  .entry-title a:hover,
+  article.hentry .edit-link a,
+  .author-box a,
+  .page-content a,
+  .entry-content a,
+  .comment-author a,
+  .comment-content a,
+  .comment-reply-title small a:hover,
+  .sidebar .widget a,
+  .sidebar .widget ul li a:hover {
+    color: #2baae1;
+  }
+  button,
+  .btn,
+  input[type='submit'],
+  input[type='reset'],
+  input[type='button'],
+  .entry-category a,
+  .pagination .prev:hover,
+  .pagination .next:hover,
+  #back-top a span {
+    background-color: #2baae1;
+  }
+  .read-more a:hover,
+  .author-box a:hover,
+  .page-content a:hover,
+  .entry-content a:hover,
+  .widget_tag_cloud .tagcloud a:hover:before,
+  .entry-tags .tag-links a:hover:before,
+  .content-loop .entry-title a:hover,
+  .content-list .entry-title a:hover,
+  .content-grid .entry-title a:hover,
+  article.hentry .edit-link a:hover,
+  .site-footer .widget ul li a:hover,
+  .comment-content a:hover {
+    color: #ff6644;
+  }
+  #back-top a:hover span,
+  .bx-wrapper .bx-pager.bx-default-pager a:hover,
+  .bx-wrapper .bx-pager.bx-default-pager a.active,
+  .bx-wrapper .bx-pager.bx-default-pager a:focus,
+  .pagination .page-numbers:hover,
+  .pagination .page-numbers.current,
+  .sidebar .widget ul li:before,
+  .widget_newsletter input[type='submit'],
+  .widget_newsletter input[type='button'],
+  .widget_newsletter button {
+    background-color: #ff6644;
+  }
+  .slicknav_nav,
+  .header-search,
+  .sf-menu li a:before {
+    border-color: #ff6644;
+  }
 </style>
 
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/manifest.json" />
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />

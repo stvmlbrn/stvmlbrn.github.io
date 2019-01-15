@@ -3,7 +3,13 @@
     <div class="container clear">
       <div class="footer-column footer-column-1">
         <div class="text-2 widget footer-widget widget_text">
-          <a href="https://twitter.com/stvmlbrn?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @stvmlbrn</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <a
+            href="https://twitter.com/stvmlbrn?ref_src=twsrc%5Etfw"
+            class="twitter-follow-button"
+            data-size="large"
+            data-show-count="false"
+            >Follow @stvmlbrn</a
+          ><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
       <div class="footer-column footer-column-2">
@@ -11,7 +17,9 @@
           <h3 class="widget-title">Recent Posts</h3>
           <ul>
             {% for post in site.posts limit:4 %}
-              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            <li>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
             {% endfor %}
           </ul>
         </div>
@@ -20,13 +28,11 @@
         <div id="categories-3" class="widget footer-widget widget_categories">
           <h3 class="widget-title">Popular Posts</h3>
           <ul>
-            {% for post in site.posts %}
-              {% if post.popular %}
-                <li>
-                  <a href="{{ site.url }}/{{ post.url }}">{{ post.title }}</a>
-                </li>
-              {% endif %}
-            {% endfor %}
+            {% for post in site.posts %} {% if post.popular %}
+            <li>
+              <a href="{{ site.url }}/{{ post.url }}">{{ post.title }}</a>
+            </li>
+            {% endif %} {% endfor %}
           </ul>
         </div>
       </div>
@@ -48,20 +54,18 @@
   <div class="clear">
     <div id="site-bottom" class="clear">
       <div class="container">
-        <div class="site-info">
-          &copy; Steve Milburn
-        </div>
+        <div class="site-info">&copy; Steve Milburn</div>
         <div class="menu-primary-menu-container">
           <ul id="footer-menu" class="footer-nav">
             <li class="menu-item menu-item-type-custom menu-item-object-custom">
               <a href="/">Home</a>
             </li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom">
+              <a href="/about">About</a>
+            </li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom">
               <a href="/contact">Contact</a>
             </li>
-            <!--<li class="menu-item menu-item-type-custom menu-item-object-custom">
-              <a href="/about">About</a>
-            </li>-->
           </ul>
         </div>
       </div>
