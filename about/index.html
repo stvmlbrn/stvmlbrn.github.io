@@ -1,32 +1,90 @@
 ---
-layout: default
 title: About Me
 ---
-<main id="main" class="site-main clear">
-  <div id="page" class="site">
-    <p class="bottom-padded">
-      Hi, I'm Steve. I like to write code.
-    </p>
-    <p class="bottom-padded">
-      I started out in technology in the late 1990s as a computer technician and network support engineer. I enjoyed the work,
-      and for the most part still do whenever it comes up, but I soon realized that I wanted to get into software
-      development. So I started studying
-      programming and began writing code. The early days were desktop applications written mostly in Visual Basic before
-      moving on to the web with the early versions of ColdFusion.
-    </p>
-    <p class="bottom-padded">
-      After realizing I wanted to write software for a living I decided to go
-      back to school to study computer science. At that time I was a 100% self-taught developer and felt
-      that a formal education would help me in some areas where my self-education may be lacking. I completed a Master's degree
-      computer science in 2007.
-    </p>
-    <p class="bottom-padded">
-      These days I'm focusing on JavaScript platforms with Node.js and React but I'm always willing and eager to learn new stacks.
-      I love web development and enjoy working on all layers of the web application stack. I'm looking for new and interesting work
-      and hope to join a team of talented engineers and do cool stuff. If you or your team needs some help in the form of a contractor or are
-      looking for a new full-time team member and think I may be a good fit, I'd love to talk about it.
-    </p>
-  </div>
-</main>
 
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+  <!--<![endif]-->
 
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body class="post-template-default single single-post single-format-standard">
+    <div id="page" class="site">
+      {% include masthead.html %}
+
+      <div id="content" class="site-content container clear">
+        <div id="primary" class="content-area">
+          <main id="main" class="site-main">
+            <article class="post type-post status-publish format-standard hentry">
+              <header class="entry-header">
+                <h1 class="entry-title">{{ page.title }}</h1>
+                <div class="entry-meta"></div>
+              </header>
+              <div class="entry-content">
+                <p>Hi, I'm Steve. I like to write code.</p>
+                <p>
+                  These days I'm working mostly with JavaScript - primarily with Node.js and React.
+                  I've been into web development for a while and I'm still learning and I still love
+                  it. In my spare time I'm building
+                  <a href="https://www.cronalarm.com">CronAlarm</a> - a platform for monitoring cron
+                  jobs and scheduled tasks.
+                </p>
+                <p>
+                  Some of the topics I'm interested in that I'm either just starting to learn and
+                  plan on learning in the near future include Docker, serverless architecture,
+                  GraphQL, and GatsbyJS. Keep an eye on on here for posts that document my learning
+                  process.
+                </p>
+                <p>
+                  I'm currently interested in other job opportunities and/or contract work so if you
+                  need some help on a project or are looking to add another full-time developer to
+                  your team, <a href="/contact">hit me up!</a> I'm located in western Maryland, and
+                  chances are you're not. So, I'm mostly interested in work that can be done
+                  remotely but relocating is a possibility for the right position. I hear
+                  Raleigh-Durham is nice this time of year ;)
+                </p>
+                <p>
+                  Also, I'm <a href="https://www.twitter.com/stvmlbrn">@stvmlbrn</a> on Twitter. I
+                  really enjoy interacting with and learning from other developers, so reach out and
+                  say hi :) Let me hear your best dad joke.
+                </p>
+              </div>
+            </article>
+          </main>
+        </div>
+        <aside id="secondary" class="widget-area sidebar">
+          <div id="recent-posts-2" class="widget widget_recent_entries">
+            <h2 class="widget-title">Popular Posts</h2>
+            <ul>
+              {% for post in site.posts %} {% if post.popular %}
+              <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </li>
+              {% endif %} {% endfor %}
+            </ul>
+          </div>
+
+          {% include sideBlockAd.html %}
+
+          <div id="recent-posts-2-test" class="widget widget_recent_entries">
+            <h2 class="widget-title">Recent Posts</h2>
+            <ul>
+              {% for post in site.posts limit:4 %}
+              <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      {% include footer.html %}
+    </div>
+  </body>
+</html>
