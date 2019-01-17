@@ -898,7 +898,7 @@ a {
   img {
     float: left;
     margin-right: 15px;
-    width: 75px;
+    width: 200px;
   }
 }
 
@@ -1465,6 +1465,8 @@ a {
 /* Entry Content */
 .page-content,
 .entry-content {
+  clear: both;
+  padding-top: 20px;
   .wp-post-image {
     margin-bottom: 10px;
     width: 100%;
