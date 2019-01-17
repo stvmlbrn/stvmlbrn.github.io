@@ -11,7 +11,7 @@ I like to start each year with a general roadmap of things I would like to impro
 
 **GraphQL** - I think I already have a use-case for GraphQL so this one is pretty high on my list. And let's face it, Facebook's tools have been great.
 
-**VS Code Shortcuts** - Despite using VS Code for a while I still come across features and shortcuts that I didn't know existed. Just this week I learned about `⌘+SHIFT+L` to select all occurances of the current selection (with multiple cursors). Awesome! My plan is to try to incorporate one new keyboard shortcut every week until I know all the ones that are useful to my workflow. I have this [VS Code cheet sheet](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) sitting on my desk for quick reference.
+**VS Code Shortcuts** - Despite using VS Code for a while I still come across features and shortcuts that I didn't know existed. Just this week I learned about `⌘+SHIFT+L` to select all occurances of the current selection (with multiple cursors). Awesome! My plan is to try to incorporate one new keyboard shortcut every week until I know all the ones that are useful to my workflow. I have this [VS Code cheat sheet](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf) sitting on my desk for quick reference.
 
 **Gatsby** - Put this on the _everyone it talking about it so I better take a look_ list. Gatsby sounds cool and people seem to love it, but I'm not sure I have a direct use case for it yet. I suppose the most obvious possibility is to convert this blog, but I've been pretty happy so far with Jekyll so that's not a pressing issue. Still, I'm going to play around with it and at least have a working knowledge of it.
 
