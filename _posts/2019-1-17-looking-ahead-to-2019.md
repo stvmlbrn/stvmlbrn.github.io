@@ -17,8 +17,6 @@ I like to start each year with a general roadmap of things I would like to impro
 
 **New React Features** - Sometimes its hard to keep up. I haven't played around much with the Context API (mostly because I've been living in Redux land), and I haven't writting a single React Hook. Now that hooks are officially a part of the React roadmap it's time I give them my full attention. And I'm sure the Context API can simplify code where Redux is overkill, so I'm going to focus there too.
 
-**CI/CD** - I feel woefully inadequate here and really need to level up my skills/knowledge.
-
 **CSS Grid** - CSS is black magic. I need to learn more of its secrets.
 
 **Serverless Architecture** - I recently saw a presentation at a local developer meetup that has really piqued my interest in serverless architecture. I'm really looking forward to this one.
