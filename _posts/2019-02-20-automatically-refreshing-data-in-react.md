@@ -27,7 +27,7 @@ Let's look at a basic example using `setInterval()`. The need for refreshing dat
         setInterval(this.getData, 5000); // runs every 5 seconds.
       }
 
-      getData() {
+      getData = () =&gt; {
         // do something to fetch data from a remote API.
       }
 
@@ -82,7 +82,7 @@ Here is the updated component:
         clearInterval(this.intervalID);
       }
 
-      getData() {
+      getData = () =&gt; {
         // do something to fetch data from a remote API.
       }
 
@@ -124,7 +124,7 @@ It can be argued that `setTimeout()` provides us with a cleaner solution since w
         clearTimeout(this.intervalID);
       }
 
-      getData() {
+      getData = () =&gt; {
         fetch('/endpoint')
           .then(response => response.json())
           .then(data => {
